@@ -2096,9 +2096,9 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f02003b;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f02003c;
         public static final int abc_textfield_search_material=0x7f02003d;
-        public static final int background=0x7f02003e;
-        public static final int design_fab_background=0x7f02003f;
-        public static final int design_snackbar_background=0x7f020040;
+        public static final int design_fab_background=0x7f02003e;
+        public static final int design_snackbar_background=0x7f02003f;
+        public static final int fond_battletap=0x7f020040;
         public static final int logo2=0x7f020041;
         public static final int notification_template_icon_bg=0x7f020042;
     }

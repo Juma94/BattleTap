@@ -68,8 +68,7 @@
             android:layout_height="wrap_content"
             android:text="@string/createAccountButton"
             android:id="@+id/createAccButtonId"
-            android:layout_gravity="center_horizontal"
-            android:background="#fa862d" />
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
 </RelativeLayout>
-<!-- From: file:/C:/Users/Abdelhamid/Mega/Private/Projet_Android/BattleTap/app/src/main/res/layout/activity_create_account.xml -->
+<!-- From: file:/E:/Android/BattleTap/app/src/main/res/layout/activity_create_account.xml -->
