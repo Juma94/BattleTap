@@ -1,17 +1,28 @@
 package com.julab.battletap;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.Window;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MenuActivity extends AppCompatActivity
 {
-    private ExpandListAdapter ExpAdapter;
-    private ArrayList<ExpandListGroup> ExpListItems;
-    private ExpandableListView ExpandList;
+    private ExpandListAdapter expandListAdapter;
+    private ArrayList<ExpandListGroup> expandListItems;
+    private ExpandableListView expandList;
+
+    private final int SOLO_GROUP = 0;
+        private final int FIGHT_THE_NUMBERS_CHILD = 0;
+
+    private final int MULITPLAYER_GROUP = 1;
+        private final int FIGHT_THE_TIMES_CHILD = 0;
+        private final int FIGHT_THE_INCREMENT_CHILD = 1;
+        private final int FIGHT_THE_BOTH_CHILD = 2;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -21,10 +32,26 @@ public class MenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_menu);
 
         // Create all components for ExpandableListView
-        ExpandList = (ExpandableListView) findViewById(R.id.expandableListSolo);
-        ExpListItems = SetStandardGroups();
-        ExpAdapter = new ExpandListAdapter(MenuActivity.this, ExpListItems);
-        ExpandList.setAdapter(ExpAdapter);
+        expandList = (ExpandableListView) findViewById(R.id.expandableListSolo);
+        expandListItems = SetStandardGroups();
+        expandListAdapter = new ExpandListAdapter(MenuActivity.this, expandListItems);
+        expandList.setAdapter(expandListAdapter);
+        // set item listener
+        expandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener()
+        {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
+            {
+                if(groupPosition == MULITPLAYER_GROUP && childPosition == FIGHT_THE_TIMES_CHILD)
+                {
+                    Toast.makeText(getApplicationContext(), "multi", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(MenuActivity.this, BluetoothBattle.class);
+                    startActivity(intent);
+                }
+                return true;
+            }
+        });
+
     }
 
     // Manage string menu of ExpandableListView

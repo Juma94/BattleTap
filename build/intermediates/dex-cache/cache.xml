@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\user\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jar="C:\Users\Abdelhamid\AppData\Local\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="E:\Android\BattleTap\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-677c2c7eef3f34856c64fcbd809928bfe27b64ea.jar" />
+        <dex dex="C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-ecdcf7f166471d8145c379ea7b8e1515e176245d.jar" />
     </item>
     <item
-        jar="E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="E:\Android\BattleTap\app\build\intermediates\pre-dexed\debug\classes-1232e6aec0268a64acb565f9a67195d11088e8ff.jar" />
-    </item>
-    <item
-        jar="E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="E:\Android\BattleTap\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-c22cc668698a5a0bbb61fb44a763b9606f75e8fa.jar" />
-    </item>
-    <item
-        jar="E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="E:\Android\BattleTap\app\build\intermediates\pre-dexed\debug\classes-98d5e92d422721db76e8885feacdcd69609ce725.jar" />
-    </item>
-    <item
-        jar="E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jar="C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="E:\Android\BattleTap\app\build\intermediates\pre-dexed\debug\classes-c5e109232ac6d60ec9689257e7413500c7739e45.jar" />
+        <dex dex="C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\pre-dexed\debug\classes-117a5cf317748998cf33da5b6c794ac98fcad611.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-488036850decc42f73351635b1b9f1e780d75bd0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\pre-dexed\debug\classes-647a756ea553183c211fd4af28b2b9c56cbe4768.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\pre-dexed\debug\classes-66adcac79838ad2d8cbf45187b2785aca04da891.jar" />
     </item>
 
 </items>
