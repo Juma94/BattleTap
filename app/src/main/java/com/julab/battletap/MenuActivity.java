@@ -46,7 +46,6 @@ public class MenuActivity extends AppCompatActivity
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-        // test
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
