@@ -46,7 +46,6 @@ public class MenuActivity extends AppCompatActivity
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
@@ -59,7 +58,7 @@ public class MenuActivity extends AppCompatActivity
 
     public ArrayList<ExpandListGroup> SetStandardGroups()
     {
-
+        // test2
         ArrayList<ExpandListGroup> listGroup = new ArrayList<ExpandListGroup>();
         ArrayList<ExpandListChild> listChild = new ArrayList<ExpandListChild>();
 
