@@ -69,6 +69,6 @@
             android:text="@string/createAccountButton"
             android:id="@+id/createAccButtonId"
             android:layout_gravity="center_horizontal"
-            android:background="#fa862d" />
+            android:background="#e66e0d" />
     </LinearLayout>
 </RelativeLayout>
