@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class ConnectionActivity extends AppCompatActivity
 {
     private Button btnConnection;
+    private TextView btnCreateAccount;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -19,6 +21,13 @@ public class ConnectionActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ConnectionActivity.this, MenuActivity.class));
+            }
+        });
+        btnCreateAccount = (TextView)findViewById(R.id.connectionActivityCreateAccountBtnId);
+        btnCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ConnectionActivity.this,CreateAccountActivity.class));
             }
         });
     }
