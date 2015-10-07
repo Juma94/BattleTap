@@ -7,9 +7,10 @@ import android.view.Window;
 public class CreateAccountActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
 }

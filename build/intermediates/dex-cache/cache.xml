@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="E:\Android\BattleTap\app\build\intermediates\pre-dexed\debug\classes-1232e6aec0268a64acb565f9a67195d11088e8ff.jar" />
-    </item>
-    <item
         jar="C:\Users\user\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
         <dex dex="E:\Android\BattleTap\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-677c2c7eef3f34856c64fcbd809928bfe27b64ea.jar" />
+    </item>
+    <item
+        jar="E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="E:\Android\BattleTap\app\build\intermediates\pre-dexed\debug\classes-1232e6aec0268a64acb565f9a67195d11088e8ff.jar" />
     </item>
     <item
         jar="E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"

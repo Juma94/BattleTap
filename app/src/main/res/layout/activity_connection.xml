@@ -28,7 +28,6 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
 
@@ -44,7 +43,8 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
 
                 <EditText
                     android:layout_width="match_parent"
@@ -55,8 +55,7 @@
                     android:hint="@string/hintEmail"
                     android:layout_gravity="center_horizontal"
                     android:textIsSelectable="true"
-                    android:textColorHint="#d6d6d6"
-                    android:textColorHighlight="#ff1100"/>
+                    android:textColorHint="#d6d6d6" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -70,38 +69,49 @@
                     android:textColorHighlight="#ff1100"/>
 
                 <Button
-                    android:layout_width="232dp"
+                    android:layout_width="329dp"
                     android:layout_height="wrap_content"
                     android:text="@string/ConnectionButton"
                     android:id="@+id/connectionButton"
                     android:layout_gravity="center_horizontal"
                     android:textSize="20dp"
                     android:height="60dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/btnconnection"
                     android:textColor="#ffffff"/>
+
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/pwdForget"
-                android:id="@+id/textView"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#0094ff"
-                android:layout_marginTop="30dp"
-                android:textSize="20dp"
-                android:layout_marginBottom="20dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/createAccountBtn"
-                android:id="@+id/connectionActivityCreateAccountBtnId"
-                android:layout_gravity="center_horizontal" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/pwdForget"
+            android:id="@+id/textView4"
+            android:textColor="#0094ff"
+            android:textSize="20dp"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Create account"
+            android:id="@+id/connectionActivityCreateAccountBtnId"
+            android:textColor="#0094ff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_marginBottom="30dp"/>
 
     </RelativeLayout>
 

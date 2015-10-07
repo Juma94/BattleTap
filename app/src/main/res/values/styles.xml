@@ -10,5 +10,9 @@
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
+    <style name="EditTextUnderline" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">#e66e0d</item>
+        <item name="colorControlActivated">#e66e0d</item>
+        <item name="colorControlHighlight">#e66e0d</item>
+    </style>
 </resources>

@@ -11,7 +11,7 @@
     <string name="hintEmail">Email</string>
     <string name="passwordText">Password</string>
     <string name="ConnectionButton">Connection</string>
-    <string name="pwdForget">Password forgotten?</string>
+    <string name="pwdForget">Password forgotten</string>
     <string name="title_activity_menu">MenuActivity</string>
     <string name="createAccountTitle">Create account</string>
     <string name="pswCreateAccountDefault">Password</string>

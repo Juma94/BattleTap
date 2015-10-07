@@ -291,6 +291,7 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <!-- From: file:/E:/Android/BattleTap/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="createAccountBtn">Create account</string>
     <string name="createAccountButton">Create</string>
     <string name="createAccountTitle">Create account</string>
     <string name="emailCreateAccount">E-mail</string>
@@ -302,7 +303,7 @@
     <string name="pseudoCreateAccountDefault">Pseudo</string>
     <string name="pswConfirmCreateAccountDefault">Confirm password</string>
     <string name="pswCreateAccountDefault">Password</string>
-    <string name="pwdForget">Password forgotten?</string>
+    <string name="pwdForget">Password forgotten</string>
     <!-- From: file:/E:/Android/BattleTap/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -1256,6 +1257,13 @@
         <item name="tabBackground">?attr/selectableItemBackground</item>
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <!-- From: file:/E:/Android/BattleTap/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="EditTextUnderline" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">#e66e0d</item>
+        <item name="colorControlActivated">#e66e0d</item>
+        <item name="colorControlHighlight">#e66e0d</item>
     </style>
     <!-- From: file:/E:/Android/BattleTap/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>

@@ -32,7 +32,11 @@
             android:id="@+id/pseudoCreateAccount"
             android:hint = "@string/pseudoCreateAccountDefault"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="20dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#d6d6d6"
+            android:textColorHighlight="#e66e0d"
+            android:textColorLink="#e66e0d"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -42,7 +46,10 @@
             android:hint="@string/pswCreateAccountDefault"
             android:id="@+id/pswCreateAccount"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="20dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#d6d6d6"
+            android:textColorHighlight="#e66e0d" />
 
         <EditText
             android:layout_width="match_parent"
@@ -52,7 +59,10 @@
             android:hint="@string/pswConfirmCreateAccountDefault"
             android:id="@+id/pswConfirmCreateAccount"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="20dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#d6d6d6"
+            android:textColorHighlight="#e66e0d" />
 
         <EditText
             android:layout_width="match_parent"
@@ -62,7 +72,10 @@
             android:hint="@string/emailCreateAccountDefault"
             android:id="@+id/emailCreateAccount"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp" />
+            android:layout_marginBottom="30dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#d6d6d6"
+            android:textColorHighlight="#e66e0d" />
 
         <Button
             android:layout_width="wrap_content"
