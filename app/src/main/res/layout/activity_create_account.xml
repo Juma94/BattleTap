@@ -77,11 +77,14 @@
             android:textColorHighlight="#e66e0d" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/createAccountButton"
             android:id="@+id/createAccButtonId"
             android:layout_gravity="center_horizontal"
-            android:background="#e66e0d" />
+            android:background="#e66e0d"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            />
     </LinearLayout>
 </RelativeLayout>
