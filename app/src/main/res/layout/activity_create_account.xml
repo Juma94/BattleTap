@@ -34,9 +34,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="20dp"
             android:textColor="#ffffff"
-            android:textColorHint="#d6d6d6"
-            android:textColorHighlight="#e66e0d"
-            android:textColorLink="#e66e0d"/>
+            android:textColorHint="#d6d6d6"/>
 
         <EditText
             android:layout_width="match_parent"
