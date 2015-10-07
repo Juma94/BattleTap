@@ -70,15 +70,15 @@
                     android:textColorHighlight="#ff1100"/>
 
                 <Button
-                    android:layout_width="match_parent"
+                    android:layout_width="232dp"
                     android:layout_height="wrap_content"
                     android:text="@string/ConnectionButton"
                     android:id="@+id/connectionButton"
                     android:layout_gravity="center_horizontal"
                     android:textSize="20dp"
                     android:height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:background="#e66e0d"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btnconnection"
                     android:textColor="#ffffff"/>
             </LinearLayout>
 
@@ -91,7 +91,16 @@
                 android:layout_gravity="center_horizontal"
                 android:textColor="#0094ff"
                 android:layout_marginTop="30dp"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/createAccountBtn"
+                android:id="@+id/connectionActivityCreateAccountBtnId"
+                android:layout_gravity="center_horizontal" />
         </LinearLayout>
 
     </RelativeLayout>

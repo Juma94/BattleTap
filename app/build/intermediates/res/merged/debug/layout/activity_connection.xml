@@ -70,7 +70,7 @@
                     android:textColorHighlight="#ff1100"/>
 
                 <Button
-                    android:layout_width="match_parent"
+                    android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:text="@string/ConnectionButton"
                     android:id="@+id/connectionButton"
@@ -78,7 +78,7 @@
                     android:textSize="20dp"
                     android:height="60dp"
                     android:layout_marginTop="10dp"
-                    android:background="#e66e0d"
+                    android:background="@drawable/btnconnection"
                     android:textColor="#ffffff"/>
             </LinearLayout>
 

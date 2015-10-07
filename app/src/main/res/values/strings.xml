@@ -20,4 +20,5 @@
     <string name="emailCreateAccount">E-mail</string>
     <string name="emailCreateAccountDefault">E-mail</string>
     <string name="createAccountButton">Create</string>
+    <string name="createAccountBtn">Create account</string>
 </resources>
