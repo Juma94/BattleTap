@@ -40,6 +40,49 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"/>
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/emailTextId"
+                    android:hint="@string/hintEmail"
+                    android:layout_gravity="center_horizontal"
+                    android:textIsSelectable="true"
+                    android:textColorHint="#d6d6d6"
+                    android:textColorHighlight="#ff1100"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/pwdTextId"
+                    android:hint="@string/passwordText"
+                    android:layout_gravity="center_horizontal"
+                    android:textColorHint="#d6d6d6"
+                    android:textColorHighlight="#ff1100"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ConnectionButton"
+                    android:id="@+id/connectionButton"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20dp"
+                    android:height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e66e0d"
+                    android:textColor="#ffffff"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <TextView
@@ -70,49 +113,6 @@
             android:layout_centerHorizontal="true"
             android:layout_alignBottom="@+id/textView4"
             android:layout_marginBottom="30dp"/>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:id="@+id/emailTextId"
-                android:hint="@string/hintEmail"
-                android:layout_gravity="center_horizontal"
-                android:textIsSelectable="true"
-                android:textColorHint="#d6d6d6"
-                android:textColorHighlight="#ff1100"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/pwdTextId"
-                android:hint="@string/passwordText"
-                android:layout_gravity="center_horizontal"
-                android:textColorHint="#d6d6d6"
-                android:textColorHighlight="#ff1100"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ConnectionButton"
-                android:id="@+id/connectionButton"
-                android:layout_gravity="center_horizontal"
-                android:textSize="20dp"
-                android:height="60dp"
-                android:layout_marginTop="10dp"
-                android:background="#e66e0d"
-                android:textColor="#ffffff"/>
-
-        </LinearLayout>
 
     </RelativeLayout>
 
