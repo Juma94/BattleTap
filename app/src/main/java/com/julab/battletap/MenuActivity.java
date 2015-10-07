@@ -58,7 +58,7 @@ public class MenuActivity extends AppCompatActivity
 
     public ArrayList<ExpandListGroup> SetStandardGroups()
     {
-
+        // test
         ArrayList<ExpandListGroup> listGroup = new ArrayList<ExpandListGroup>();
         ArrayList<ExpandListChild> listChild = new ArrayList<ExpandListChild>();
 
