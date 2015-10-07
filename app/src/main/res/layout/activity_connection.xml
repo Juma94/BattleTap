@@ -28,7 +28,6 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
 
@@ -41,57 +40,78 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"/>
 
-            <LinearLayout
-                android:orientation="vertical"
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/pwdForget"
+            android:id="@+id/textView4"
+            android:textColor="#0094ff"
+            android:textSize="20dp"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Create account"
+            android:id="@+id/textView"
+            android:textColor="#0094ff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_marginBottom="30dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:ems="10"
-                    android:id="@+id/emailTextId"
-                    android:hint="@string/hintEmail"
-                    android:layout_gravity="center_horizontal"
-                    android:textIsSelectable="true"
-                    android:textColorHint="#d6d6d6"
-                    android:textColorHighlight="#ff1100"/>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:ems="10"
-                    android:id="@+id/pwdTextId"
-                    android:hint="@string/passwordText"
-                    android:layout_gravity="center_horizontal"
-                    android:textColorHint="#d6d6d6"
-                    android:textColorHighlight="#ff1100"/>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ConnectionButton"
-                    android:id="@+id/connectionButton"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="20dp"
-                    android:height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:background="#e66e0d"
-                    android:textColor="#ffffff"/>
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/pwdForget"
-                android:id="@+id/textView"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/emailTextId"
+                android:hint="@string/hintEmail"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#0094ff"
-                android:layout_marginTop="30dp"
-                android:textSize="20dp" />
+                android:textIsSelectable="true"
+                android:textColorHint="#d6d6d6"
+                android:textColorHighlight="#ff1100"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/pwdTextId"
+                android:hint="@string/passwordText"
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="#d6d6d6"
+                android:textColorHighlight="#ff1100"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ConnectionButton"
+                android:id="@+id/connectionButton"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20dp"
+                android:height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="#e66e0d"
+                android:textColor="#ffffff"/>
+
         </LinearLayout>
 
     </RelativeLayout>
