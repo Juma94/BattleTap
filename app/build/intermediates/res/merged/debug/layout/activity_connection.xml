@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/pwdForget"
-            android:id="@+id/textView4"
+            android:id="@+id/connection_activity_pwdForgottenId"
             android:textColor="#0094ff"
             android:textSize="20dp"
             android:layout_alignParentTop="false"
@@ -110,7 +110,7 @@
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:layout_centerHorizontal="true"
-            android:layout_alignBottom="@+id/textView4"
+            android:layout_alignBottom="@+id/connection_activity_pwdForgottenId"
             android:layout_marginBottom="30dp"/>
 
     </RelativeLayout>
