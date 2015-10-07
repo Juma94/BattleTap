@@ -263,6 +263,7 @@
     <!-- From: file:/E:/Android/BattleTap/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="ConnectionButton">Connection</string>
+    <string name="EditTextHintEmail">Email</string>
     <!-- From: file:/E:/Android/BattleTap/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -299,6 +300,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="hintEmail">Email</string>
     <string name="not_bluetooth_device">Aucun périphérique Bluetooth trouvé</string>
+    <string name="passwordForgottenText">Please enter your email. We will send you your password : </string>
     <string name="passwordText">Password</string>
     <string name="pseudoCreateAccountDefault">Pseudo</string>
     <string name="pswConfirmCreateAccountDefault">Confirm password</string>
@@ -313,6 +315,7 @@
     <string name="title_activity_device_list">DeviceListActivity</string>
     <string name="title_activity_discover_devices_and_services">DiscoverDevicesAndServices</string>
     <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_password_forgotten">PasswordForgottenActivity</string>
     <string name="title_activity_test2_bt">Test2BTActivity</string>
     <!-- From: file:/E:/Android/BattleTap/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>

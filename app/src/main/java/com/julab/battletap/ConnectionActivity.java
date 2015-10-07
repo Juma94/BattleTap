@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class ConnectionActivity extends AppCompatActivity
 {
     private Button btnConnection;
-    private TextView btnCreateAccount;
+    private TextView btnCreateAccount, btnPwdForgotten;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -28,6 +28,13 @@ public class ConnectionActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ConnectionActivity.this,CreateAccountActivity.class));
+            }
+        });
+        btnPwdForgotten = (TextView)findViewById(R.id.connection_activity_pwdForgottenId);
+        btnPwdForgotten.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ConnectionActivity.this,PasswordForgottenActivity.class));
             }
         });
     }

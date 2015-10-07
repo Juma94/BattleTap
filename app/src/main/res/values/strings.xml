@@ -21,4 +21,7 @@
     <string name="emailCreateAccountDefault">E-mail</string>
     <string name="createAccountButton">Create</string>
     <string name="createAccountBtn">Create account</string>
+    <string name="title_activity_password_forgotten">PasswordForgottenActivity</string>
+    <string name="passwordForgottenText">Please enter your email. We will send you your password : </string>
+    <string name="EditTextHintEmail">Email</string>
 </resources>
