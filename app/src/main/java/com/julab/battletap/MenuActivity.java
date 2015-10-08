@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class MenuActivity extends AppCompatActivity
 {
+    // test commit github
     private ExpandListAdapter expandListAdapter;
     private ArrayList<ExpandListGroup> expandListItems;
     private ExpandableListView expandList;
