@@ -30,7 +30,7 @@ MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Abdelhamid\Mega\Pri
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:11:9-29
+		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:11:9-41
 	android:allowBackup
 		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:9:9-35
 	android:icon
