@@ -106,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Create account"
+            android:text="@string/create_account_link_text"
             android:id="@+id/connectionActivityCreateAccountBtnId"
             android:textColor="#3cc9ff"
             android:textSize="20dp"

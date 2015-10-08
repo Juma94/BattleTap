@@ -19,11 +19,19 @@
     <string name="pseudoCreateAccountDefault">Pseudo</string>
     <string name="emailCreateAccount">E-mail</string>
     <string name="emailCreateAccountDefault">E-mail</string>
-    <string name="createAccountButton">Create</string>
     <string name="createAccountBtn">Create account</string>
     <string name="title_activity_password_forgotten">PasswordForgottenActivity</string>
     <string name="passwordForgottenText">Please enter your email. We will send you your password : </string>
-    <string name="EditTextHintEmail">Email</string>
+
+
+    <!--  Create Account Activity -->
+
+    <string name="createAccountButton">Create</string>
+    <string name="activity_create_account_editText_pseudo_text">Pseudo</string>
+    <string name="activity_create_account_pwd_editText_text">Password</string>
+    <string name="activity_create_account_pwdConfirm_editText_text">Confirm password</string>
+    <string name="activity_create_account_title_text">Create Account</string>
+    <string name="activity_create_account_EditText_Email_hint_text">Email</string>
 
     <!--  BluetoothBattle -->
     <string name="send">Send</string>
@@ -50,4 +58,6 @@
     <string name="Nb_Number_catch_text">Nb nombres atteints</string>
     <string name="number_of_caught_numbers">4/10</string>
     <string name="number_to_catch">125</string>
+    <string name="create_account_link_text">Create account</string>
+
 </resources>

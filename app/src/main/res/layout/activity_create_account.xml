@@ -15,7 +15,7 @@
         android:paddingBottom="@dimen/activity_vertical_margin"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/activity_password_forgotten"
-        tools:context="com.julab.battletap.PasswordForgottenActivity"
+        tools:context="com.julab.battletap.CreateAccountActivity"
         android:background="@drawable/fond_battletap">
 
         <LinearLayout
@@ -24,18 +24,27 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.07"
+            android:id="@+id/linearLayout2"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="30dp">
+            android:layout_alignParentBottom="true">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/passwordForgottenText"
-                android:id="@+id/textView"
+                android:text="@string/activity_create_account_title_text"
+                android:id="@+id/activity_create_account_title_id"
+                android:layout_gravity="center_horizontal"
+                android:textSize="30dp"
+                android:layout_marginBottom="30dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_create_account_pseudo_id"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/activity_create_account_editText_pseudo_text"
                 android:layout_weight="0.00" />
 
             <EditText
@@ -43,20 +52,30 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/activity_password_forgottent_editText_email_id"
-                android:hint="@string/EditTextHintEmail"
-                android:layout_marginBottom="60dp"
-                android:layout_weight="0.00"
-                android:layout_marginTop="60dp" />
+                android:id="@+id/activity_create_account_editText_email_id"
+                android:hint="@string/activity_create_account_EditText_Email_hint_text"
+                android:layout_weight="0.00" />
 
-            <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
-                android:layout_width="90dp"
+            <EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:hint="@string/activity_create_account_pwd_editText_text"
+                android:id="@+id/activity_create_account_pwd_editText_id"
                 android:layout_gravity="center_horizontal"
-                android:src="@android:drawable/ic_dialog_email"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.00" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:hint="@string/activity_create_account_pwdConfirm_editText_text"
+                android:id="@+id/activity_create_account_pwdConfirm_editText_id"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.00" />
+
         </LinearLayout>
 
     </RelativeLayout>
