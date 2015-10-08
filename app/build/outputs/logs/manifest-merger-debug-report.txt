@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:2:1-52:12
 	xmlns:android
 		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -22,7 +22,7 @@ ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\mai
 	android:name
 		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:6:22-71
 application
-ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:8:5-44:19
+ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:8:5-50:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.0.1] C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:22:5-20
@@ -76,21 +76,21 @@ ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\mai
 	android:name
 		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:31:13-54
 activity#com.julab.battletap.BluetoothBattle
-ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:36:9-39:20
+ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:36:9-44:20
 	android:label
 		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:37:19-51
 	android:theme
-		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:38:19-50
+		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:38:19-62
 	android:name
 		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:36:19-69
 activity#com.julab.battletap.DeviceListActivity
-ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:40:9-43:20
+ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:45:9-48:20
 	android:label
-		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:41:19-56
+		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:46:19-56
 	android:theme
-		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:42:19-62
+		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:47:19-62
 	android:name
-		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:40:19-72
+		ADDED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml:45:19-72
 uses-sdk
 INJECTED from C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Abdelhamid\Mega\Private\Projet_Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43

@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -77,22 +78,40 @@ public class BluetoothBattle extends Activity
 
         // Initialize the push button with a listener that for click events
         btnPush = (Button) findViewById(R.id.btnPush);
-        btnPush.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                sendMessage("end");
-            }
-        });
-
-        // Initialize the confirm button with a listener that for click events
-        btnConfirm = (Button) findViewById(R.id.btnConfirm);
-        btnConfirm.setOnClickListener(new View.OnClickListener()
+        btnPush.setOnTouchListener(new View.OnTouchListener()
         {
             @Override
-            public void onClick(View v)
+            public boolean onTouch(View v, MotionEvent event)
             {
-                sendMessage("end");
+                if (event.getAction() == event.ACTION_UP)
+                {
+                    btnPush.setBackgroundResource(R.drawable.push_button);
+                    sendMessage("end");
+                }
+                else if (event.getAction() == event.ACTION_DOWN)
+                {
+                    btnPush.setBackgroundResource(R.drawable.pushed_button);
+                }
+                return true;
+            }
+        });
+        // Initialize the confirm button with a listener that for click events
+        btnConfirm = (Button) findViewById(R.id.btnConfirm);
+        btnConfirm.setOnTouchListener(new View.OnTouchListener()
+        {
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                if (event.getAction() == event.ACTION_UP)
+                {
+                    btnConfirm.setBackgroundResource(R.drawable.btn_valider);
+                    sendMessage("end");
+                }
+                else if (event.getAction() == event.ACTION_DOWN)
+                {
+                    btnConfirm.setBackgroundResource(R.drawable.btn_valider_pushed);
+                }
+                return true;
             }
         });
 
@@ -198,7 +217,7 @@ public class BluetoothBattle extends Activity
     private void sendMessage(String message)
     {
         // Check that we're actually connected before trying anything
-        if (battleService.getState() != BluetoothBattleService.STATE_CONNECTED)
+        if (battleService == null || battleService.getState() != BluetoothBattleService.STATE_CONNECTED)
         {
             Toast.makeText(this, R.string.not_connected, Toast.LENGTH_SHORT).show();
             return;
@@ -249,7 +268,7 @@ public class BluetoothBattle extends Activity
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
                     //mConversationArrayAdapter.add(connectedDeviceName + ":  " + readMessage);
-                    if(readMessage.equals("end"))
+                    if (readMessage.equals("end"))
                     {
                         Toast.makeText(getApplicationContext(), "READ : " + readMessage, Toast.LENGTH_LONG).show();
                         finish();
