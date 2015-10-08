@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.julab.battletap.SplashScreenActivity"
-            android:theme="@style/BlueTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,31 +28,31 @@
         <activity
             android:name="com.julab.battletap.ConnectionActivity"
             android:label="@string/title_activity_connection"
-            android:theme="@style/BlueTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name="com.julab.battletap.MenuActivity"
             android:label="@string/title_activity_menu"
-            android:theme="@style/BlueTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name="com.julab.battletap.CreateAccountActivity"
-            android:theme="@style/BlueTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name="com.julab.battletap.PasswordForgottenActivity"
             android:label="@string/title_activity_password_forgotten"
-            android:theme="@style/BlueTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name="com.julab.battletap.BluetoothBattle"
             android:label="@string/app_name"
-            android:theme="@style/BlueTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name="com.julab.battletap.DeviceListActivity"
             android:label="@string/select_device"
-            android:theme="@style/BlueTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 
