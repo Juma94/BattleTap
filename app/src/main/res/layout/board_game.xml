@@ -1,39 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:id="@+id/gameLayout">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/gameLayout"
+    android:background="@drawable/fond_battletap">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Numéro"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/num_to_catch_text"
         android:id="@+id/num_to_catch"
-        android:textSize="50dp"/>
+        android:textSize="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:id="@+id/tap"
-        android:textSize="50dp"/>
-
-    <Button
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Nb_Number_catch_text"
+        android:id="@+id/Nb_Number_Catch_id"
+        android:layout_alignBottom="@+id/num_to_catch"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Push"
-        android:id="@+id/btnPush"/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/number_to_catch"
+        android:textAlignment="center"
+        android:id="@+id/nb_to_catch_current_id"
+        android:layout_below="@+id/num_to_catch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/num_to_catch"
+        android:layout_alignEnd="@+id/num_to_catch" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Confirm"
-        android:id="@+id/btnConfirm"/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/number_of_caught_numbers"
+        android:id="@+id/nb_caught_current_id"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/Nb_Number_Catch_id"
+        android:layout_alignLeft="@+id/Nb_Number_Catch_id"
+        android:layout_alignStart="@+id/Nb_Number_Catch_id" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout"
+        android:weightSum="1"
+        android:layout_below="@+id/num_to_catch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/tap"
+            android:textSize="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBaseline="@+id/btnPush"
+            android:layout_alignBottom="@+id/btnPush"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPush"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/push_button" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnConfirm"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btnPush"
+            android:layout_alignRight="@+id/btnPush"
+            android:layout_alignEnd="@+id/btnPush"
+            android:background="@drawable/btn_valider" />
+
+    </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Connection (if connected -> not visible)"
-        android:id="@+id/btnConnection"/>
-</LinearLayout>
+        android:id="@+id/btnConnection"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -46,4 +46,8 @@
     <string name="connect">Connect a device</string>
     <string name="discoverable">Make discoverable</string>
     <string name="bluetooth_unavailable">Bluetooth is not available</string>
+    <string name="num_to_catch_text">Nombre à atteindre</string>
+    <string name="Nb_Number_catch_text">Nb nombres atteints</string>
+    <string name="number_of_caught_numbers">4/10</string>
+    <string name="number_to_catch">125</string>
 </resources>
