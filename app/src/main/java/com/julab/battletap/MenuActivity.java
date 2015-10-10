@@ -32,6 +32,18 @@ public class MenuActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        /*
+        Change la couleur de la barre de status
+
+        Window window = getWindow();
+        // clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        // finally change the color
+        window.setStatusBarColor(Color.parseColor("#000000"));
+        */
+
         // Create all components for ExpandableListView
         expandList = (ExpandableListView) findViewById(R.id.expandableListSolo);
         expandListItems = SetStandardGroups();
@@ -59,6 +71,23 @@ public class MenuActivity extends AppCompatActivity
             }
         });
 
+        // allows to keep only one group expanded
+        expandList.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener()
+        {
+            private int lastExpandedPosition = -1;
+
+            @Override
+            public void onGroupExpand(int groupPosition)
+            {
+                if (lastExpandedPosition != -1
+                        && groupPosition != lastExpandedPosition)
+                {
+                    expandList.collapseGroup(lastExpandedPosition);
+                }
+                lastExpandedPosition = groupPosition;
+            }
+        });
+
     }
 
     // Manage string menu of ExpandableListView
@@ -71,7 +100,7 @@ public class MenuActivity extends AppCompatActivity
         group1.setName("Solo");
 
         ExpandListChild child1Group1 = new ExpandListChild();
-        child1Group1.setName("• Fight the numbers");
+        child1Group1.setName("Fight the numbers");
         child1Group1.setTag(null);
 
         listChild.add(child1Group1);
@@ -84,19 +113,19 @@ public class MenuActivity extends AppCompatActivity
         group2.setName("Multiplayer");
 
         ExpandListChild child1Group2 = new ExpandListChild();
-        child1Group2.setName("• Fight the times");
+        child1Group2.setName("Fight the times");
         child1Group2.setTag(null);
 
         listChild.add(child1Group2);
 
         ExpandListChild child2Group2 = new ExpandListChild();
-        child2Group2.setName("• Fight the increment");
+        child2Group2.setName("Fight the increment");
         child2Group2.setTag(null);
 
         listChild.add(child2Group2);
 
         ExpandListChild child3Group2 = new ExpandListChild();
-        child3Group2.setName("• Fight both");
+        child3Group2.setName("Fight both");
         child3Group2.setTag(null);
 
         listChild.add(child3Group2);

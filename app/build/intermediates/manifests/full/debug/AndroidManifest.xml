@@ -35,7 +35,9 @@
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name="com.julab.battletap.CreateAccountActivity" >
+        <activity
+            android:name="com.julab.battletap.CreateAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name="com.julab.battletap.PasswordForgottenActivity"

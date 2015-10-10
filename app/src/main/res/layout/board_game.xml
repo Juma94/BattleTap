@@ -17,7 +17,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +30,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textStyle="bold"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:textColor="#ffffff"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +43,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/num_to_catch"
-        android:layout_alignEnd="@+id/num_to_catch" />
+        android:layout_alignEnd="@+id/num_to_catch"
+        android:textColor="#ffffff"
+        android:textSize="30dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,7 +57,9 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/Nb_Number_Catch_id"
         android:layout_alignLeft="@+id/Nb_Number_Catch_id"
-        android:layout_alignStart="@+id/Nb_Number_Catch_id" />
+        android:layout_alignStart="@+id/Nb_Number_Catch_id"
+        android:textColor="#ffffff"
+        android:textSize="30dp"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -76,7 +82,8 @@
             android:layout_alignBaseline="@+id/btnPush"
             android:layout_alignBottom="@+id/btnPush"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"/>
 
         <Button
             android:layout_width="wrap_content"
