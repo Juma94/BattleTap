@@ -16,7 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-/**
+/*
  * This is the battle activity
  */
 public class BluetoothBattle extends Activity
@@ -83,12 +83,12 @@ public class BluetoothBattle extends Activity
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == event.ACTION_UP)
+                if (event.getAction() == MotionEvent.ACTION_UP)
                 {
                     btnPush.setBackgroundResource(R.drawable.push_button);
                     sendMessage("end");
                 }
-                else if (event.getAction() == event.ACTION_DOWN)
+                else if (event.getAction() == MotionEvent.ACTION_DOWN)
                 {
                     btnPush.setBackgroundResource(R.drawable.pushed_button);
                 }
@@ -102,12 +102,12 @@ public class BluetoothBattle extends Activity
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == event.ACTION_UP)
+                if (event.getAction() == MotionEvent.ACTION_UP)
                 {
                     btnConfirm.setBackgroundResource(R.drawable.btn_valider);
                     sendMessage("end");
                 }
-                else if (event.getAction() == event.ACTION_DOWN)
+                else if (event.getAction() == MotionEvent.ACTION_DOWN)
                 {
                     btnConfirm.setBackgroundResource(R.drawable.btn_valider_pushed);
                 }
