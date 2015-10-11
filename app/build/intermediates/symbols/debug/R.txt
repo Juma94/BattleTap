@@ -752,10 +752,9 @@ int layout select_dialog_multichoice_material 0x7f040034
 int layout select_dialog_singlechoice_material 0x7f040035
 int layout support_simple_spinner_dropdown_item 0x7f040036
 int menu menu_device_list 0x7f0d0000
-int menu menu_discover_devices_and_services 0x7f0d0001
-int menu menu_main 0x7f0d0002
-int menu menu_test2_bt 0x7f0d0003
-int menu option_menu 0x7f0d0004
+int menu menu_main 0x7f0d0001
+int menu menu_test2_bt 0x7f0d0002
+int menu option_menu 0x7f0d0003
 int mipmap ic_launcher 0x7f030000
 int string ConnectionButton 0x7f060012
 int string Nb_Number_catch_text 0x7f060013
