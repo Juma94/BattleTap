@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by user on 05-10-15.
- */
+
 public class ExpandListAdapter extends BaseExpandableListAdapter
 {
     private Context context;
@@ -85,12 +83,12 @@ public class ExpandListAdapter extends BaseExpandableListAdapter
         ExpandListChild child = (ExpandListChild) getChild(groupPosition, childPosition);
         if (convertView == null)
         {
-            LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.expandlist_child_textview, null);
         }
         TextView textView = (TextView) convertView.findViewById(R.id.tvChildId);
         textView.clearComposingText();
-        textView.setText(child.getName().toString());
+        textView.setText(child.getName());
         textView.setTag(child.getTag());
 
         // TODO Auto-generated method stub
@@ -104,8 +102,9 @@ public class ExpandListAdapter extends BaseExpandableListAdapter
 
         if (view == null)
         {
-            LayoutInflater inf = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view = inf.inflate(R.layout.expandlist_group_textview, null);
+            LayoutInflater inf;
+            inf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inf.inflate(R.layout.expandlist_group_textview,null);
         }
 
         TextView textView = (TextView) view.findViewById(R.id.tvGroupId);

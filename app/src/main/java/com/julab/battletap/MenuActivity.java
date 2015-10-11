@@ -61,6 +61,12 @@ public class MenuActivity extends AppCompatActivity
                     Intent intent = new Intent(MenuActivity.this, BluetoothBattle.class);
                     startActivity(intent);
                 }
+                if(groupPosition == SOLO_GROUP && childPosition == FIGHT_THE_NUMBERS_CHILD)
+                {
+                    Toast.makeText(getApplicationContext(), "Solo", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(MenuActivity.this, BoardGameSoloActivity.class);
+                    startActivity(intent);
+                }
                 return true;
             }
         });
