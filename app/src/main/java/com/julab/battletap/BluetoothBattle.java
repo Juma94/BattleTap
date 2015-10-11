@@ -62,7 +62,7 @@ public class BluetoothBattle extends Activity
         if (D) Log.e(TAG, "+++ ON CREATE +++");
 
         // Set up the window layout
-        setContentView(R.layout.board_game);
+        setContentView(R.layout.activity_board_game_multi);
 
         // Get local Bluetooth adapter
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();

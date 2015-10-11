@@ -16,21 +16,14 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/layoutMenu">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:id="@+id/imageView2"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/logo"/>
-
         <ExpandableListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/expandableListSolo"
             android:groupIndicator="@null"
             android:scrollIndicators="none"
             android:layout_gravity="center"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="250dp"
             android:childDivider="#00000000"
             android:divider="#00000000"/>
 

@@ -11,6 +11,7 @@ public class ConnectionActivity extends AppCompatActivity
 {
     private Button btnConnection;
     private TextView btnCreateAccount, btnPwdForgotten;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
