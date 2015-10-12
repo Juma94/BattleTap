@@ -16,13 +16,14 @@ public class SummaryBoardGameSoloActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary_board_game_solo);
 
-        GlobalData globalData = (GlobalData) getApplicationContext();;
+        GlobalData globalData = (GlobalData) getApplicationContext();
         ListView summaryList = (ListView) findViewById(R.id.summaryList);
         summaryList.setAdapter(new SummaryListAdapter(getApplicationContext(), R.layout.row_model_summary, globalData));
 
         TextView txtTotalTime = (TextView) findViewById(R.id.txtTotalTime);
         TextView txtTotalDifference = (TextView) findViewById(R.id.txtTotalDifference);
         TextView txtTotalNumbersCaught = (TextView) findViewById(R.id.txtTotalNumbersCaught);
+        TextView txtRatio = (TextView) findViewById(R.id.txtRatio);
 
         txtTotalTime.setText("Total time : " + globalData.getChrono().getText());
         int totalDiff = 0;
@@ -33,6 +34,9 @@ public class SummaryBoardGameSoloActivity extends AppCompatActivity
         txtTotalDifference.setText("Total difference : " + totalDiff);
         // -1 because the last one are saved (the last are bigger than the numbers caught)
         txtTotalNumbersCaught.setText("Total caught : " + (globalData.getTabNumbersCaught().size()-1));
+
+        double ratio = totalDiff > 0 ? (double)(globalData.getTabNumbersCaught().size()-1) / (double) totalDiff  : 0;
+        txtRatio.setText("Ratio : " + ratio);
     }
 
     @Override

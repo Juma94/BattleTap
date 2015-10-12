@@ -15,5 +15,5 @@
         android:gravity="center"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:background="@drawable/btn_menu"/>
+        android:background="@drawable/background_btn_group_menu"/>
 </LinearLayout>

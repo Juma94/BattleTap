@@ -54,12 +54,12 @@ public class MenuActivity extends AppCompatActivity
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
             {
-                if(groupPosition == MULITPLAYER_GROUP && childPosition == FIGHT_THE_TIMES_CHILD)
+                if (groupPosition == MULITPLAYER_GROUP && childPosition == FIGHT_THE_TIMES_CHILD)
                 {
                     Intent intent = new Intent(MenuActivity.this, BluetoothBattle.class);
                     startActivity(intent);
                 }
-                if(groupPosition == SOLO_GROUP && childPosition == FIGHT_THE_NUMBERS_CHILD)
+                if (groupPosition == SOLO_GROUP && childPosition == FIGHT_THE_NUMBERS_CHILD)
                 {
                     Intent intent = new Intent(MenuActivity.this, BoardGameSoloActivity.class);
                     startActivity(intent);

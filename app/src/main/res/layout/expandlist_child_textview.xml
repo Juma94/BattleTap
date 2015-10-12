@@ -14,7 +14,7 @@
         android:textSize="30dp"
         android:gravity="center"
         android:textColor="#e2e2e2"
-        android:background="@drawable/btn_child_menu"
+        android:background="@drawable/background_btn_child_menu"
         android:autoText="false"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"/>

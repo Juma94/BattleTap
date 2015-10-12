@@ -25,7 +25,8 @@
             android:textSize="50dp"
             android:textColor="#ffffff"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"/>
 
         <ListView
             android:layout_width="match_parent"
@@ -54,8 +55,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtTotalTime"
-                android:textSize="30dp"
+                android:id="@+id/txtTotalNumbersCaught"
+                android:textSize="20dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
@@ -65,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtTotalDifference"
-                android:textSize="30dp"
+                android:textSize="20dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
@@ -74,12 +75,23 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtTotalNumbersCaught"
-                android:textSize="30dp"
+                android:id="@+id/txtTotalTime"
+                android:textSize="20dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:text="text"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtRatio"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="text"
+                />
 
         </LinearLayout>
 

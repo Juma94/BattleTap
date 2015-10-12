@@ -59,7 +59,6 @@ public class BoardGameSoloActivity extends AppCompatActivity
     {
         int increment = (int) (Math.random() * 101);
         int multiplier = (int) (Math.random() * 101);
-        int germ = (int) (Math.random() * 101);
 
         tabNumbersCaught.add(randomNumber(tabNumbersCaught.get(current - 1), multiplier, increment));
     }
