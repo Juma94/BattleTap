@@ -59,5 +59,7 @@
     <string name="create_account_link_text">Create account</string>
     <string name="summary_board_game_solo_activity_title">Summary</string>
     <string name="summary_board_game_solo_activity_btnBack">Back To Menu</string>
+    <string name="caught">" caught"</string>
+    <string name="game_over">Game over !</string>
 
 </resources>

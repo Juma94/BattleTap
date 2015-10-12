@@ -1,24 +1,38 @@
 package com.julab.battletap;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.ListView;
+import android.widget.TextView;
 
 public class SummaryBoardGameSoloActivity extends AppCompatActivity
 {
-    private Button btnBackToMenu;
+    private GlobalData globalData;
+    private ListView summaryList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary_board_game_solo);
-        ClickListener listenerObj = new ClickListener();
-        btnBackToMenu = (Button) findViewById(R.id.summary_board_game_solo_activity_btnBack_id);
-        btnBackToMenu.setOnClickListener(listenerObj);
+
+        GlobalData globalData = (GlobalData) getApplicationContext();;
+        ListView summaryList = (ListView) findViewById(R.id.summaryList);
+        summaryList.setAdapter(new SummaryListAdapter(getApplicationContext(), R.layout.row_model_summary, globalData));
+
+        TextView txtTotalTime = (TextView) findViewById(R.id.txtTotalTime);
+        TextView txtTotalDifference = (TextView) findViewById(R.id.txtTotalDifference);
+        TextView txtTotalNumbersCaught = (TextView) findViewById(R.id.txtTotalNumbersCaught);
+
+        txtTotalTime.setText("Total time : " + globalData.getChrono().getText());
+        int totalDiff = 0;
+        for(int i = 0; i < globalData.getTabNumbersTaps().size()-1; i++)
+        {
+            totalDiff += globalData.getTabNumbersCaught().get(i) - globalData.getTabNumbersTaps().get(i);
+        }
+        txtTotalDifference.setText("Total difference : " + totalDiff);
+        // -1 because the last one are saved (the last are bigger than the numbers caught)
+        txtTotalNumbersCaught.setText("Total caught : " + (globalData.getTabNumbersCaught().size()-1));
     }
 
     @Override
@@ -26,21 +40,5 @@ public class SummaryBoardGameSoloActivity extends AppCompatActivity
     {
         super.onBackPressed();
         finish();
-    }
-
-    private class ClickListener implements View.OnClickListener
-    {
-        @Override
-        public void onClick(View v)
-        {
-            if (v == btnBackToMenu)
-            {
-                Toast.makeText(getApplicationContext(), "Retour au menu", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(SummaryBoardGameSoloActivity.this, MenuActivity.class);
-                startActivity(intent);
-                SummaryBoardGameSoloActivity.this.finish();
-                //ATTENTION RETOUR EN ARRIERE = RETOUR MENU
-            }
-        }
     }
 }

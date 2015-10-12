@@ -8,12 +8,13 @@
     tools:context="com.julab.battletap.SummaryBoardGameSoloActivity"
     android:background="@drawable/fond_battletap">
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/summaryLayout">
 
         <TextView
             android:layout_width="wrap_content"
@@ -22,13 +23,65 @@
             android:id="@+id/summary_board_game_solo_activity_title_id"
             android:layout_gravity="center_horizontal"
             android:textSize="50dp"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
 
-        <Button
-            android:layout_width="wrap_content"
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/summaryList"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="none"
+            android:layout_below="@+id/summary_board_game_solo_activity_title_id"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/layoutTotalValues"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/summary_board_game_solo_activity_btnBack"
-            android:id="@+id/summary_board_game_solo_activity_btnBack_id"
-            android:layout_gravity="center_horizontal" />
-    </LinearLayout>
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/layoutTotalValues"
+            android:background="@drawable/border_background">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTotalTime"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="text"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTotalDifference"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="text"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTotalNumbersCaught"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="text"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 </RelativeLayout>
