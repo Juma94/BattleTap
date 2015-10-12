@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -57,13 +56,11 @@ public class MenuActivity extends AppCompatActivity
             {
                 if(groupPosition == MULITPLAYER_GROUP && childPosition == FIGHT_THE_TIMES_CHILD)
                 {
-                    Toast.makeText(getApplicationContext(), "multi", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(MenuActivity.this, BluetoothBattle.class);
                     startActivity(intent);
                 }
                 if(groupPosition == SOLO_GROUP && childPosition == FIGHT_THE_NUMBERS_CHILD)
                 {
-                    Toast.makeText(getApplicationContext(), "Solo", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(MenuActivity.this, BoardGameSoloActivity.class);
                     startActivity(intent);
                 }
@@ -93,8 +90,8 @@ public class MenuActivity extends AppCompatActivity
     // Manage string menu of ExpandableListView
     public ArrayList<ExpandListGroup> SetStandardGroups()
     {
-        ArrayList<ExpandListGroup> listGroup = new ArrayList<ExpandListGroup>();
-        ArrayList<ExpandListChild> listChild = new ArrayList<ExpandListChild>();
+        ArrayList<ExpandListGroup> listGroup = new ArrayList<>();
+        ArrayList<ExpandListChild> listChild = new ArrayList<>();
 
         ExpandListGroup group1 = new ExpandListGroup();
         group1.setName("Solo");
@@ -106,7 +103,7 @@ public class MenuActivity extends AppCompatActivity
         listChild.add(child1Group1);
         group1.setItems(listChild);
 
-        listChild = new ArrayList<ExpandListChild>();
+        listChild = new ArrayList<>();
 
 
         ExpandListGroup group2 = new ExpandListGroup();

@@ -1,5 +1,6 @@
 package com.julab.battletap;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -80,26 +81,44 @@ public class BoardGameSoloActivity extends AppCompatActivity
         nbToCatch.setText(tabNumbersCaught.get(current) + "");
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        // Dialog to say to user the game are finished
+        AlertDialog.Builder dialog = new AlertDialog.Builder(BoardGameSoloActivity.this);
+        dialog.setMessage(getString(R.string.want_to_quit));
+        dialog.setCancelable(false);
+        dialog.setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+                BoardGameSoloActivity.super.onBackPressed();
+            }
+        });
+        dialog.setNegativeButton(getString(R.string.no), null);
+        dialog.show();
+    }
+
     private class ClickListener implements View.OnTouchListener
     {
         @Override
         public boolean onTouch(View v, MotionEvent event)
         {
-            if(event.getAction() == event.ACTION_DOWN)
+            if (event.getAction() == MotionEvent.ACTION_DOWN)
             {
-                if(v.equals(btnConfirm))
+                if (v.equals(btnConfirm))
                 {
                     btnConfirm.setBackgroundResource(R.drawable.btn_valider_pushed);
                 }
-                else if(v.equals(btnPush))
+                else if (v.equals(btnPush))
                 {
                     btnPush.setBackgroundResource(R.drawable.pushed_button);
                 }
             }
-            else if(event.getAction() == event.ACTION_UP)
+            else if (event.getAction() == MotionEvent.ACTION_UP)
             {
                 // do action when button is up for not spam when button is down
-                if(v.equals(btnConfirm))
+                if (v.equals(btnConfirm))
                 {
                     btnConfirm.setBackgroundResource(R.drawable.btn_valider);
                     tabNumbersTaps.add(nbCurrentTaps);
@@ -115,23 +134,30 @@ public class BoardGameSoloActivity extends AppCompatActivity
                     {
                         chronometer.stop();
 
+                        // Dialog to say to user the game are finished
                         AlertDialog.Builder dialog = new AlertDialog.Builder(BoardGameSoloActivity.this);
                         dialog.setMessage(R.string.game_over);
+                        dialog.setCancelable(false);
+                        dialog.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener()
+                        {
+                            public void onClick(DialogInterface dialog, int id)
+                            {
+                                // save datas
+                                GlobalData globalData = (GlobalData) getApplicationContext();
+                                globalData.setTabNumbersCaught(tabNumbersCaught);
+                                globalData.setTabNumbersTaps(tabNumbersTaps);
+                                globalData.setChrono(chronometer);
+
+                                // call summary activity
+                                Intent intent = new Intent(BoardGameSoloActivity.this, SummaryBoardGameSoloActivity.class);
+                                startActivity(intent);
+                                BoardGameSoloActivity.this.finish();
+                            }
+                        });
                         dialog.show();
-
-                        // save datas
-                        GlobalData globalData = (GlobalData) getApplicationContext();
-                        globalData.setTabNumbersCaught(tabNumbersCaught);
-                        globalData.setTabNumbersTaps(tabNumbersTaps);
-                        globalData.setChrono(chronometer);
-
-                        // call summary activity
-                        Intent intent = new Intent(BoardGameSoloActivity.this, SummaryBoardGameSoloActivity.class);
-                        startActivity(intent);
-                        finish();
                     }
                 }
-                else if(v.equals(btnPush))
+                else if (v.equals(btnPush))
                 {
                     btnPush.setBackgroundResource(R.drawable.push_button);
                     nbCurrentTaps += (int) (1 + Math.random() * 5); // random increment

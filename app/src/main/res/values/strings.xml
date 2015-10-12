@@ -61,5 +61,9 @@
     <string name="summary_board_game_solo_activity_btnBack">Back To Menu</string>
     <string name="caught">" caught"</string>
     <string name="game_over">Game over !</string>
+    <string name="ok">Ok</string>
+    <string name="want_to_quit">Do you really want to quit ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
 </resources>
