@@ -36,7 +36,8 @@ public class SummaryBoardGameSoloActivity extends AppCompatActivity
         txtTotalNumbersCaught.setText("Total caught : " + (globalData.getTabNumbersCaught().size()-1));
 
         double ratio = totalDiff > 0 ? (double)(globalData.getTabNumbersCaught().size()-1) / (double) totalDiff  : 0;
-        txtRatio.setText("Ratio : " + ratio);
+        double ratioTwoDecimal = (double) ((int) (ratio*100))/100;
+        txtRatio.setText("Ratio : " + ratioTwoDecimal);
     }
 
     @Override
