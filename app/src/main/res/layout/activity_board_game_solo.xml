@@ -105,5 +105,17 @@
             android:layout_alignEnd="@+id/btnPush"
             android:background="@drawable/btn_valider" />
 
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/board_game_solo_chrono"
+            android:layout_gravity="center_horizontal"
+            android:autoText="false"
+            android:textSize="70dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+
     </LinearLayout>
 </RelativeLayout>
