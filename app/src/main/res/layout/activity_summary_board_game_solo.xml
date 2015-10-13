@@ -65,7 +65,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtTotalDifference"
+                android:id="@+id/txtTotalTime"
                 android:textSize="20dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#ffffff"
@@ -75,7 +75,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtTotalTime"
+                android:id="@+id/txtTotalDifference"
                 android:textSize="20dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#ffffff"

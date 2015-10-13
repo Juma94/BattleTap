@@ -65,5 +65,6 @@
     <string name="want_to_quit">Do you really want to quit ?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="want_to_retry">Do you want to retry ?</string>
 
 </resources>

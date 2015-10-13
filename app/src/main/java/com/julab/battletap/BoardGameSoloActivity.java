@@ -2,6 +2,7 @@ package com.julab.battletap;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -158,8 +159,15 @@ public class BoardGameSoloActivity extends AppCompatActivity
                 }
                 else if (v.equals(btnPush))
                 {
+                    int randIncrement = (int) (1 + Math.random() * 5); // random increment
+                    if (nbCurrentTaps+randIncrement > tabNumbersCaught.get(current))
+                    {
+                        MediaPlayer mp = MediaPlayer.create(BoardGameSoloActivity.this, R.raw.sound_btn_exceeded);
+                        mp.start();
+                    }
+
                     btnPush.setBackgroundResource(R.drawable.push_button);
-                    nbCurrentTaps += (int) (1 + Math.random() * 5); // random increment
+                    nbCurrentTaps += randIncrement;
                     nbTaps.setText(nbCurrentTaps + "");
                 }
             }

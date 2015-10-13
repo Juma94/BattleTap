@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
 
 public class MenuActivity extends AppCompatActivity
 {
-    // test commit github
     private ExpandListAdapter expandListAdapter;
     private ArrayList<ExpandListGroup> expandListItems;
     private ExpandableListView expandList;
@@ -27,21 +25,8 @@ public class MenuActivity extends AppCompatActivity
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
-        /*
-        Change la couleur de la barre de status
-
-        Window window = getWindow();
-        // clear FLAG_TRANSLUCENT_STATUS flag:
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        // finally change the color
-        window.setStatusBarColor(Color.parseColor("#000000"));
-        */
 
         // Create all components for ExpandableListView
         expandList = (ExpandableListView) findViewById(R.id.expandableListSolo);
@@ -54,6 +39,7 @@ public class MenuActivity extends AppCompatActivity
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
             {
+                
                 if (groupPosition == MULITPLAYER_GROUP && childPosition == FIGHT_THE_TIMES_CHILD)
                 {
                     Intent intent = new Intent(MenuActivity.this, BluetoothBattle.class);
@@ -76,9 +62,9 @@ public class MenuActivity extends AppCompatActivity
             @Override
             public void onGroupExpand(int groupPosition)
             {
-                if (lastExpandedPosition != -1
-                        && groupPosition != lastExpandedPosition)
+                if (lastExpandedPosition != -1 && groupPosition != lastExpandedPosition)
                 {
+                    // on replie le dernier groupe deplie
                     expandList.collapseGroup(lastExpandedPosition);
                 }
                 lastExpandedPosition = groupPosition;
