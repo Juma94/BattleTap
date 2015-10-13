@@ -33,14 +33,15 @@
             android:weightSum="1">
 
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
                 android:layout_height="180dp"
                 android:id="@+id/backgroundNumRow"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/logo"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="30dp"
-                android:layout_weight="0.12"/>
+                android:layout_weight="0.12"
+                />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -57,7 +58,7 @@
                     android:id="@+id/emailTextId"
                     android:hint="@string/hintEmail"
                     android:layout_gravity="center_horizontal"
-                    android:textIsSelectable="true"
+                    android:textIsSelectable="false"
                     android:textColorHint="#d6d6d6"
                     android:autoText="false"
                     android:background="@drawable/edit_text_color"
