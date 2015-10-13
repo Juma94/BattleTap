@@ -62,9 +62,12 @@
     <string name="caught">" caught"</string>
     <string name="game_over">Game over !</string>
     <string name="ok">Ok</string>
-    <string name="want_to_quit">Do you really want to quit ?</string>
+    <string name="want_to_quit">Do you want to quit ?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="want_to_retry">Do you want to retry ?</string>
+    <string name="want_to_retry">Retry ?</string>
+    <string name="text_penality">"Penality : "</string>
+    <string name="text_difference">"Difference : "</string>
+    <string name="text_caught">" Caught : "</string>
 
 </resources>

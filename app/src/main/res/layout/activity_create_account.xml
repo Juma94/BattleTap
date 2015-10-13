@@ -37,7 +37,9 @@
                 android:id="@+id/activity_create_account_title_id"
                 android:layout_gravity="center_horizontal"
                 android:textSize="30dp"
-                android:layout_marginBottom="30dp" />
+                android:layout_marginBottom="30dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -45,7 +47,10 @@
                 android:id="@+id/activity_create_account_pseudo_id"
                 android:layout_gravity="center_horizontal"
                 android:hint="@string/activity_create_account_editText_pseudo_text"
-                android:layout_weight="0.00" />
+                android:layout_weight="0.00"
+                android:background="@drawable/edit_text_color"
+                android:textColorHint="#d6d6d6"
+                android:textColor="#ffffff"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -54,7 +59,10 @@
                 android:ems="10"
                 android:id="@+id/activity_create_account_editText_email_id"
                 android:hint="@string/activity_create_account_EditText_Email_hint_text"
-                android:layout_weight="0.00" />
+                android:layout_weight="0.00"
+                android:background="@drawable/edit_text_color"
+                android:textColorHint="#d6d6d6"
+                android:textColor="#ffffff"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -64,7 +72,10 @@
                 android:hint="@string/activity_create_account_pwd_editText_text"
                 android:id="@+id/activity_create_account_pwd_editText_id"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="0.00" />
+                android:layout_weight="0.00"
+                android:background="@drawable/edit_text_color"
+                android:textColorHint="#d6d6d6"
+                android:textColor="#ffffff"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -74,7 +85,10 @@
                 android:hint="@string/activity_create_account_pwdConfirm_editText_text"
                 android:id="@+id/activity_create_account_pwdConfirm_editText_id"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="0.00" />
+                android:layout_weight="0.00"
+                android:background="@drawable/edit_text_color"
+                android:textColorHint="#d6d6d6"
+                android:textColor="#ffffff"/>
 
         </LinearLayout>
 

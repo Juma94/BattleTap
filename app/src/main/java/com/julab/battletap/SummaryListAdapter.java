@@ -47,15 +47,15 @@ public class SummaryListAdapter extends ArrayAdapter
         if(position == getCount()-1)
         {
             imageNumRow.setBackgroundColor(Color.parseColor("#ff8b00"));
-            txtDifference.setText("Penality : " + (globalData.getTabNumbersTaps().get(position) - globalData.getTabNumbersCaught().get(position)));
+            txtDifference.setText(globalData.getString(R.string.text_penality) + (globalData.getTabNumbersTaps().get(position) - globalData.getTabNumbersCaught().get(position)));
         }
         else
         {
-            txtDifference.setText("Difference : " + (globalData.getTabNumbersCaught().get(position) - globalData.getTabNumbersTaps().get(position)));
+            txtDifference.setText(globalData.getString(R.string.text_difference) + (globalData.getTabNumbersCaught().get(position) - globalData.getTabNumbersTaps().get(position)));
         }
 
         txtNumRow.setText((position+1)+"");
-        txtInfo.setText("Taps : " + globalData.getTabNumbersTaps().get(position) + " Caught : " + globalData.getTabNumbersCaught().get(position));
+        txtInfo.setText("Taps : " + globalData.getTabNumbersTaps().get(position) + globalData.getString(R.string.text_caught) + globalData.getTabNumbersCaught().get(position));
 
 
         return convertView;

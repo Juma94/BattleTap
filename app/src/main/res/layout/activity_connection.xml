@@ -58,7 +58,10 @@
                     android:hint="@string/hintEmail"
                     android:layout_gravity="center_horizontal"
                     android:textIsSelectable="true"
-                    android:textColorHint="#d6d6d6" />
+                    android:textColorHint="#d6d6d6"
+                    android:autoText="false"
+                    android:background="@drawable/edit_text_color"
+                    android:textColor="#ffffff"/>
 
                 <EditText
                     android:layout_width="match_parent"
@@ -69,8 +72,9 @@
                     android:hint="@string/passwordText"
                     android:layout_gravity="center_horizontal"
                     android:textColorHint="#d6d6d6"
-                    android:textColorHighlight="#ff1100"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/edit_text_color"
+                    android:textColor="#ffffff"/>
 
             </LinearLayout>
 
