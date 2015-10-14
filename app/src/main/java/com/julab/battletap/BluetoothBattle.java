@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /*
@@ -21,6 +22,14 @@ import android.widget.Toast;
  */
 public class BluetoothBattle extends Activity
 {
+    //Variable jeu
+    int TabJeu[] = new int[10];
+
+
+    private TextView nbCaught, nbToCatch, nbTaps;
+    private int current = 0, nbCurrentTaps, nbCurrentCaught;
+
+
     // Debugging
     private static final String TAG = "BluetoothBattle";
     private static final boolean D = true;
@@ -60,10 +69,16 @@ public class BluetoothBattle extends Activity
     {
         super.onCreate(savedInstanceState);
         if (D) Log.e(TAG, "+++ ON CREATE +++");
-
+        //
+        for (int i = 0; i<10; i++)
+        {
+            TabJeu[i] = (int)(Math.random()*100)+1;
+        }
+        Toast.makeText(this,TabJeu[current]+"",Toast.LENGTH_LONG).show();
         // Set up the window layout
         setContentView(R.layout.activity_board_game_multi);
 
+        updateNumbers();
         // Get local Bluetooth adapter
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -86,7 +101,8 @@ public class BluetoothBattle extends Activity
                 if (event.getAction() == MotionEvent.ACTION_UP)
                 {
                     btnPush.setBackgroundResource(R.drawable.push_button);
-                    sendMessage("end");
+                    nbCurrentTaps ++;
+                    nbTaps.setText(nbCurrentTaps + "");
                 }
                 else if (event.getAction() == MotionEvent.ACTION_DOWN)
                 {
@@ -104,8 +120,20 @@ public class BluetoothBattle extends Activity
             {
                 if (event.getAction() == MotionEvent.ACTION_UP)
                 {
-                    btnConfirm.setBackgroundResource(R.drawable.btn_valider);
-                    sendMessage("end");
+                    // si fin tableau message Terminer + lancement summarry
+                    if(current <9)
+                    {
+                        btnConfirm.setBackgroundResource(R.drawable.btn_valider);
+                        current++;
+                        nbCurrentCaught++;
+                        nbCurrentTaps = 0;
+                        updateNumbers();
+                    }
+                    else
+                    {
+                        sendMessage("Finish");
+                    }
+
                 }
                 else if (event.getAction() == MotionEvent.ACTION_DOWN)
                 {
@@ -124,6 +152,17 @@ public class BluetoothBattle extends Activity
                 BluetoothBattle.this.showDeviceList();
             }
         });
+    }
+    public void updateNumbers()
+    {
+        nbTaps = (TextView) findViewById(R.id.board_game_multi_nbTaps_id);
+        nbTaps.setText(nbCurrentTaps + "");
+
+        nbCaught = (TextView) findViewById(R.id.board_game_multi_nb_caught_current_id);
+        nbCaught.setText(nbCurrentCaught + getString(R.string.caught));
+
+        nbToCatch = (TextView) findViewById(R.id.board_game_multi_nb_to_catch_current_id);
+        nbToCatch.setText(TabJeu[current] + "");
     }
 
     @Override
@@ -260,7 +299,6 @@ public class BluetoothBattle extends Activity
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
-
                     Toast.makeText(getApplicationContext(), "WRITE : " + writeMessage, Toast.LENGTH_LONG).show();
                     break;
                 case MESSAGE_READ: // go here if the remote app send a message
@@ -268,7 +306,7 @@ public class BluetoothBattle extends Activity
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
                     //mConversationArrayAdapter.add(connectedDeviceName + ":  " + readMessage);
-                    if (readMessage.equals("end"))
+                    if (readMessage.equals("Finish"))
                     {
                         Toast.makeText(getApplicationContext(), "READ : " + readMessage, Toast.LENGTH_LONG).show();
                         finish();
