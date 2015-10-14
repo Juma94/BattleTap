@@ -22,6 +22,7 @@ public class ConnectionActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ConnectionActivity.this, MenuActivity.class));
+                ConnectionActivity.this.finish();
             }
         });
         btnCreateAccount = (TextView)findViewById(R.id.connectionActivityCreateAccountBtnId);
