@@ -11,25 +11,28 @@
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:text="Please choose a max number"
-            android:textColor="#000001"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"/>
+            android:textColor="#7a7a7a"
+            android:textSize="20dp"
+            android:gravity="center"/>
 
         <NumberPicker
             android:id="@+id/numberPicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_below="@+id/dialog_label"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="64dp" />
+            android:layout_marginTop="20dp"/>
 
         <Button
             android:id="@+id/dialogOK"
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="OK"
             android:layout_below="@+id/numberPicker"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:textColor="#2b9696"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
 
     </RelativeLayout>
 </LinearLayout>

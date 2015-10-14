@@ -16,13 +16,14 @@ public class ConnectionActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_connection);
         btnConnection = (Button)findViewById(R.id.connectionButton);
         btnConnection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ConnectionActivity.this, MenuActivity.class));
-                ConnectionActivity.this.finish();
+                //ConnectionActivity.this.finish();
             }
         });
         btnCreateAccount = (TextView)findViewById(R.id.connectionActivityCreateAccountBtnId);

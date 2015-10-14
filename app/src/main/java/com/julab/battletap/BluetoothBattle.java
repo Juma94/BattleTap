@@ -21,7 +21,7 @@ import android.widget.Toast;
  */
 public class BluetoothBattle extends Activity
 {
-    //Variable jeu
+    // Game variables
     private int[] TabJeu = new int[0];
 
     private TextView nbCaught, nbToCatch, nbTaps;
@@ -102,7 +102,8 @@ public class BluetoothBattle extends Activity
                 return true;
             }
         });
-        // Initialize the confirm button with a listener that for click events
+
+        // Initialize the confirm button with a listener for click events
         btnConfirm = (Button) findViewById(R.id.btnConfirm);
         btnConfirm.setOnTouchListener(new View.OnTouchListener()
         {
@@ -168,10 +169,10 @@ public class BluetoothBattle extends Activity
         if (isDebuggingMode) Log.e(TAG, "++ ON START ++");
 
         // If BT is not on, request that it be enabled.
-        // setupGame() will then be called during onActivityResult
         if (!bluetoothAdapter.isEnabled())
         {
             bluetoothAdapter.enable();
+
             // wait for bluetoothAdapter enabling
             while (!bluetoothAdapter.isEnabled()) ;
         }
@@ -199,12 +200,14 @@ public class BluetoothBattle extends Activity
             }
         }
 
+        // if join session button pressed then show a list of device for connection
         if (getIntent().getExtras().getBoolean("IsClient"))
         {
             showDeviceList();
             getIntent().putExtra("IsHostSelected", true);
             getIntent().putExtra("IsClient", false);
         }
+        // if it's not a client and not host session button pressed then make it discoverable and wait a client connection
         else if (!getIntent().getExtras().getBoolean("IsClient") && !getIntent().getExtras().getBoolean("IsHostSelected"))
         {
             ensureDiscoverable();
@@ -241,7 +244,7 @@ public class BluetoothBattle extends Activity
     public void onDestroy()
     {
         super.onDestroy();
-        // Stop the Bluetooth chat services
+        // Stop the Bluetooth battle services
         if (battleService != null) battleService.stop();
         if (isDebuggingMode) Log.e(TAG, "--- ON DESTROY ---");
     }

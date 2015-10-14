@@ -11,10 +11,10 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/layoutMenu">
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutMenu"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true">
 
         <ExpandableListView
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:groupIndicator="@null"
             android:scrollIndicators="none"
             android:layout_gravity="center"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="55dp"
             android:childDivider="#00000000"
             android:divider="#00000000"/>
 
@@ -37,4 +37,15 @@
 
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="330dp"
+        android:layout_height="210dp"
+        android:id="@+id/imageView2"
+        android:background="@drawable/logo2"
+        android:layout_weight="0.12"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
 </RelativeLayout>
