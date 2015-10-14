@@ -42,4 +42,9 @@ public class GlobalData extends android.app.Application
     {
         this.chrono = chrono;
     }
+
+    public boolean isLastItem(int position)
+    {
+        return position == tabNumbersTaps.size();
+    }
 }

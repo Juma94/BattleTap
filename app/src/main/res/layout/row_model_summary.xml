@@ -10,7 +10,7 @@
         android:layout_height="70dp"
         android:id="@+id/backgroundNumRow"
         android:baselineAlignBottom="true"
-        android:background="#2dc900"
+        android:background="#12da2b"
         android:layout_margin="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"

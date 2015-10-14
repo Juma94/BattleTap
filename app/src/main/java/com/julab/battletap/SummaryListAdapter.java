@@ -31,20 +31,18 @@ public class SummaryListAdapter extends ArrayAdapter
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-
         if (convertView == null)
         {
+            LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.row_model_summary, null);
         }
-
 
         ImageView imageNumRow = (ImageView) convertView.findViewById(R.id.backgroundNumRow);
         TextView txtNumRow = (TextView) convertView.findViewById(R.id.txtNumRow);
         TextView txtInfo = (TextView) convertView.findViewById(R.id.txtInfo);
         TextView txtDifference = (TextView) convertView.findViewById(R.id.txtDifference);
 
-        if(position == getCount()-1)
+        if (globalData.isLastItem(position + 1))
         {
             imageNumRow.setBackgroundColor(Color.parseColor("#ff8b00"));
             txtDifference.setText(globalData.getString(R.string.text_penality) + (globalData.getTabNumbersTaps().get(position) - globalData.getTabNumbersCaught().get(position)));
@@ -54,9 +52,8 @@ public class SummaryListAdapter extends ArrayAdapter
             txtDifference.setText(globalData.getString(R.string.text_difference) + (globalData.getTabNumbersCaught().get(position) - globalData.getTabNumbersTaps().get(position)));
         }
 
-        txtNumRow.setText((position+1)+"");
+        txtNumRow.setText((position + 1) + "");
         txtInfo.setText("Taps : " + globalData.getTabNumbersTaps().get(position) + globalData.getString(R.string.text_caught) + globalData.getTabNumbersCaught().get(position));
-
 
         return convertView;
     }

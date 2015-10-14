@@ -6,27 +6,34 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class HostClientActivity extends AppCompatActivity {
+public class HostClientActivity extends AppCompatActivity
+{
     private Button btnHost, btnJoin;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_host_client);
-        btnHost = (Button)findViewById(R.id.btnHost_id);
-        btnHost.setOnClickListener(new View.OnClickListener() {
+        btnHost = (Button) findViewById(R.id.btnHost_id);
+        btnHost.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent intent = new Intent(HostClientActivity.this, BluetoothBattle.class);
                 intent.putExtra("IsClient", false);
                 intent.putExtra("IsHostSelected", false);
                 startActivity(intent);
             }
         });
-        btnJoin = (Button)findViewById(R.id.btnJoin_id);
-        btnJoin.setOnClickListener(new View.OnClickListener() {
+        btnJoin = (Button) findViewById(R.id.btnJoin_id);
+        btnJoin.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HostClientActivity.this,BluetoothBattle.class);
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(HostClientActivity.this, BluetoothBattle.class);
                 intent.putExtra("IsClient", true);
                 startActivity(intent);
             }

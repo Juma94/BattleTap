@@ -30,7 +30,7 @@ public class SplashScreenActivity extends AppCompatActivity
             @Override
             public void onAnimationStart(Animation animation)
             {
-
+                return;
             }
 
             @Override

@@ -27,6 +27,7 @@ public class ExpandListAdapter extends BaseExpandableListAdapter
         {
             groups.add(group);
         }
+
         int index = groups.indexOf(group);
         ArrayList<ExpandListChild> child = groups.get(index).getItems();
         child.add(item);
@@ -104,7 +105,7 @@ public class ExpandListAdapter extends BaseExpandableListAdapter
         {
             LayoutInflater inf;
             inf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inf.inflate(R.layout.expandlist_group_textview,null);
+            view = inf.inflate(R.layout.expandlist_group_textview, null);
         }
 
         TextView textView = (TextView) view.findViewById(R.id.tvGroupId);

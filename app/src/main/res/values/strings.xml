@@ -33,15 +33,13 @@
 
     <string name="action_settings">Settings</string>
     <string name="no_bluetooth_device">No Bluetooth device found</string>
-    <string name="title_activity_discover_devices_and_services">DiscoverDevicesAndServices</string>
-    <string name="title_activity_test2_bt">Test2BTActivity</string>
-    <string name="title_activity_device_list">DeviceListActivity</string>
-    <string name="title_activity_connection">ConnectionActivity</string>
+    <string name="title_activity_device_list">Devices List</string>
+    <string name="title_activity_connection">Connection</string>
     <string name="hintEmail">Email</string>
     <string name="passwordText">Password</string>
     <string name="ConnectionButton">Connection</string>
     <string name="pwdForget">Password forgotten</string>
-    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_menu">Menu</string>
     <string name="createAccountTitle">Create account</string>
     <string name="pswCreateAccountDefault">Password</string>
     <string name="pswConfirmCreateAccountDefault">Confirm password</string>
@@ -49,13 +47,11 @@
     <string name="emailCreateAccount">E-mail</string>
     <string name="emailCreateAccountDefault">E-mail</string>
     <string name="createAccountBtn">Create account</string>
-    <string name="title_activity_password_forgotten">PasswordForgottenActivity</string>
+    <string name="title_activity_password_forgotten">Password Forgotten</string>
     <string name="passwordForgottenText">Please enter your email. We will send you your password : </string>
 
     <string name="num_to_catch_text">Nombre à atteindre</string>
     <string name="Nb_Number_catch_text">Nb nombres atteints</string>
-    <string name="number_of_caught_numbers">4/10</string>
-    <string name="number_to_catch">125</string>
     <string name="create_account_link_text">Create account</string>
     <string name="summary_board_game_solo_activity_title">Summary</string>
     <string name="summary_board_game_solo_activity_btnBack">Back To Menu</string>

@@ -30,8 +30,8 @@ public class SummaryBoardGameSoloActivity extends AppCompatActivity
 
         txtTotalTime.setText("Total time : " + globalData.getChrono().getText());
         int totalDiff = 0;
-        int nbElems = globalData.getTabNumbersTaps().size()-1;
-        for(int i = 0; i < nbElems; i++)
+        int nbElems = globalData.getTabNumbersTaps().size() - 1;
+        for (int i = 0; i < nbElems; i++)
         {
             totalDiff += globalData.getTabNumbersCaught().get(i) - globalData.getTabNumbersTaps().get(i);
         }
@@ -39,10 +39,10 @@ public class SummaryBoardGameSoloActivity extends AppCompatActivity
         totalDiff -= globalData.getTabNumbersCaught().get(nbElems) - globalData.getTabNumbersTaps().get(nbElems);
         txtTotalDifference.setText("Total difference : " + totalDiff);
         // -1 because the last one are saved (the last are bigger than the numbers caught)
-        txtTotalNumbersCaught.setText("Total caught : " + (globalData.getTabNumbersCaught().size()-1));
+        txtTotalNumbersCaught.setText("Total caught : " + (globalData.getTabNumbersCaught().size() - 1));
 
-        double ratio = totalDiff > 0 ? (double)(globalData.getTabNumbersCaught().size()-1) / (double) totalDiff  : 0;
-        double ratioTwoDecimal = (double) ((int) (ratio*100))/100;
+        double ratio = totalDiff > 0 ? (double) (globalData.getTabNumbersCaught().size() - 1) / (double) totalDiff : 0;
+        double ratioTwoDecimal = (double) ((int) (ratio * 100)) / 100;
         txtRatio.setText("Ratio : " + ratioTwoDecimal);
     }
 

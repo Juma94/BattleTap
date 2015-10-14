@@ -1,16 +1,15 @@
 package com.julab.battletap;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -23,16 +22,16 @@ import android.widget.Toast;
 public class BluetoothBattle extends Activity
 {
     //Variable jeu
-    int TabJeu[] = new int[10];
-
+    private int[] TabJeu = new int[0];
 
     private TextView nbCaught, nbToCatch, nbTaps;
     private int current = 0, nbCurrentTaps, nbCurrentCaught;
 
+    private AlertDialog waitMessage;
 
     // Debugging
     private static final String TAG = "BluetoothBattle";
-    private static final boolean D = true;
+    private static final boolean isDebuggingMode = true;
 
     // Message types sent from the BluetoothBattleService Handler
     public static final int MESSAGE_STATE_CHANGE = 1;
@@ -52,7 +51,6 @@ public class BluetoothBattle extends Activity
     // Layout Views
     private Button btnPush;
     private Button btnConfirm;
-    private Button btnConnection;
 
     // Name of the connected device
     private String connectedDeviceName = null;
@@ -63,22 +61,15 @@ public class BluetoothBattle extends Activity
     // Member object for the chat services
     private BluetoothBattleService battleService = null;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        if (D) Log.e(TAG, "+++ ON CREATE +++");
-        //
-        for (int i = 0; i<10; i++)
-        {
-            TabJeu[i] = (int)(Math.random()*100)+1;
-        }
-        Toast.makeText(this,TabJeu[current]+"",Toast.LENGTH_LONG).show();
+        if (isDebuggingMode) Log.e(TAG, "+++ ON CREATE +++");
+
         // Set up the window layout
         setContentView(R.layout.activity_board_game_multi);
 
-        updateNumbers();
         // Get local Bluetooth adapter
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -101,7 +92,7 @@ public class BluetoothBattle extends Activity
                 if (event.getAction() == MotionEvent.ACTION_UP)
                 {
                     btnPush.setBackgroundResource(R.drawable.push_button);
-                    nbCurrentTaps ++;
+                    nbCurrentTaps++;
                     nbTaps.setText(nbCurrentTaps + "");
                 }
                 else if (event.getAction() == MotionEvent.ACTION_DOWN)
@@ -121,7 +112,7 @@ public class BluetoothBattle extends Activity
                 if (event.getAction() == MotionEvent.ACTION_UP)
                 {
                     // si fin tableau message Terminer + lancement summarry
-                    if(current <9)
+                    if (current < 9)
                     {
                         btnConfirm.setBackgroundResource(R.drawable.btn_valider);
                         current++;
@@ -143,23 +134,28 @@ public class BluetoothBattle extends Activity
             }
         });
 
-        btnConnection = (Button) findViewById(R.id.btnConnection);
-        btnConnection.setOnClickListener(new View.OnClickListener()
+        // create a dialog to make wait the user
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Waiting player...");
+        builder.setCancelable(false);
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener()
         {
             @Override
-            public void onClick(View v)
+            public void onClick(DialogInterface dialog, int which)
             {
-                BluetoothBattle.this.showDeviceList();
+                BluetoothBattle.this.finish();
             }
         });
+        waitMessage = builder.create();
     }
+
     public void updateNumbers()
     {
         nbTaps = (TextView) findViewById(R.id.board_game_multi_nbTaps_id);
         nbTaps.setText(nbCurrentTaps + "");
 
         nbCaught = (TextView) findViewById(R.id.board_game_multi_nb_caught_current_id);
-        nbCaught.setText(nbCurrentCaught + getString(R.string.caught));
+        nbCaught.setText(nbCurrentCaught + "/" + TabJeu.length);
 
         nbToCatch = (TextView) findViewById(R.id.board_game_multi_nb_to_catch_current_id);
         nbToCatch.setText(TabJeu[current] + "");
@@ -169,26 +165,26 @@ public class BluetoothBattle extends Activity
     public void onStart()
     {
         super.onStart();
-        if (D) Log.e(TAG, "++ ON START ++");
+        if (isDebuggingMode) Log.e(TAG, "++ ON START ++");
 
         // If BT is not on, request that it be enabled.
         // setupGame() will then be called during onActivityResult
         if (!bluetoothAdapter.isEnabled())
         {
             bluetoothAdapter.enable();
-            while(!bluetoothAdapter.isEnabled());
+            // wait for bluetoothAdapter enabling
+            while (!bluetoothAdapter.isEnabled()) ;
         }
-        else
-        {
-            if (battleService == null) setupGame();
-        }
+
+        if (battleService == null) setupGame();
+
     }
 
     @Override
     public synchronized void onResume()
     {
         super.onResume();
-        if (D) Log.e(TAG, "+ ON RESUME +");
+        if (isDebuggingMode) Log.e(TAG, "+ ON RESUME +");
 
         // Performing this check in onResume() covers the case in which BT was
         // not enabled during onStart(), so we were paused to enable it...
@@ -203,15 +199,16 @@ public class BluetoothBattle extends Activity
             }
         }
 
-        if(getIntent().getExtras().getBoolean("IsClient"))
+        if (getIntent().getExtras().getBoolean("IsClient"))
         {
             showDeviceList();
             getIntent().putExtra("IsHostSelected", true);
-            getIntent().putExtra("IsClient",false);
+            getIntent().putExtra("IsClient", false);
         }
-        else if(!getIntent().getExtras().getBoolean("IsClient") && !getIntent().getExtras().getBoolean("IsHostSelected"))
+        else if (!getIntent().getExtras().getBoolean("IsClient") && !getIntent().getExtras().getBoolean("IsHostSelected"))
         {
             ensureDiscoverable();
+            waitMessage.show();
         }
     }
 
@@ -230,14 +227,14 @@ public class BluetoothBattle extends Activity
     public synchronized void onPause()
     {
         super.onPause();
-        if (D) Log.e(TAG, "- ON PAUSE -");
+        if (isDebuggingMode) Log.e(TAG, "- ON PAUSE -");
     }
 
     @Override
     public void onStop()
     {
         super.onStop();
-        if (D) Log.e(TAG, "-- ON STOP --");
+        if (isDebuggingMode) Log.e(TAG, "-- ON STOP --");
     }
 
     @Override
@@ -246,12 +243,12 @@ public class BluetoothBattle extends Activity
         super.onDestroy();
         // Stop the Bluetooth chat services
         if (battleService != null) battleService.stop();
-        if (D) Log.e(TAG, "--- ON DESTROY ---");
+        if (isDebuggingMode) Log.e(TAG, "--- ON DESTROY ---");
     }
 
     private void ensureDiscoverable()
     {
-        if (D) Log.d(TAG, "ensure discoverable");
+        if (isDebuggingMode) Log.d(TAG, "ensure discoverable");
         if (bluetoothAdapter.getScanMode() != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE)
         {
             Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
@@ -292,7 +289,7 @@ public class BluetoothBattle extends Activity
             switch (msg.what)
             {
                 case MESSAGE_STATE_CHANGE:
-                    if (D) Log.i(TAG, "MESSAGE_STATE_CHANGE: " + msg.arg1);
+                    if (isDebuggingMode) Log.i(TAG, "MESSAGE_STATE_CHANGE: " + msg.arg1);
                     switch (msg.arg1)
                     {
                         case BluetoothBattleService.STATE_CONNECTED:
@@ -300,6 +297,7 @@ public class BluetoothBattle extends Activity
                             break;
                         case BluetoothBattleService.STATE_CONNECTING:
                             // here, you can display a message for view that is connected
+                            Toast.makeText(getApplicationContext(), "Connecting...", Toast.LENGTH_SHORT).show();
                             break;
                         case BluetoothBattleService.STATE_LISTEN:
                         case BluetoothBattleService.STATE_NONE:
@@ -311,35 +309,72 @@ public class BluetoothBattle extends Activity
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
-                    Toast.makeText(getApplicationContext(), "WRITE : " + writeMessage, Toast.LENGTH_LONG).show();
+
+                    //////////////////////////////////////
+                    // Do an Action with sended message //
+                    //////////////////////////////////////
+
                     break;
                 case MESSAGE_READ: // go here if the remote app send a message
                     byte[] readBuf = (byte[]) msg.obj;
+
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
-                    //mConversationArrayAdapter.add(connectedDeviceName + ":  " + readMessage);
+
+                    // interaction with received message
                     if (readMessage.equals("Finish"))
                     {
-                        Toast.makeText(getApplicationContext(), "READ : " + readMessage, Toast.LENGTH_LONG).show();
                         finish();
+                    }
+                    else if(isNumeric(readMessage))
+                    {
+                        initTabNumber(Integer.parseInt(readMessage));
                     }
                     break;
                 case MESSAGE_DEVICE_NAME: // go here when a device is connected
                     // save the connected device's name
                     connectedDeviceName = msg.getData().getString(DEVICE_NAME);
                     Toast.makeText(getApplicationContext(), "Connected to " + connectedDeviceName, Toast.LENGTH_SHORT).show();
+
+                    // dismiss dialog waiting player
+                    waitMessage.dismiss();
+
+                    // init tab with a number specified by the host user
+                    if (!getIntent().getExtras().getBoolean("IsClient") && !getIntent().getExtras().getBoolean("IsHostSelected"))
+                    {
+                        NumberPickerDialog numberPickerDialog = new NumberPickerDialog(BluetoothBattle.this, new NumberPickerDialog.DialogListener()
+                        {
+                            @Override
+                            public void okButtonPressed(int n)
+                            {
+                                Log.i("NumPicker", "Nombre select : " + n);
+                                initTabNumber(n);
+                                BluetoothBattle.this.sendMessage("" + n);
+                            }
+                        });
+                        numberPickerDialog.show();
+                    }
                     break;
                 case MESSAGE_TOAST:
-                    Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST),
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST), Toast.LENGTH_SHORT).show();
                     break;
             }
         }
     };
 
+    private void initTabNumber(int n)
+    {
+        TabJeu = new int[n];
+        for (int i = 0; i < TabJeu.length; i++)
+        {
+            TabJeu[i] = (int) (Math.random() * 100) + 1;
+        }
+        updateNumbers();
+    }
+
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        if (D) Log.d(TAG, "onActivityResult " + resultCode);
+        if (isDebuggingMode) Log.d(TAG, "onActivityResult " + resultCode);
         switch (requestCode)
         {
             case REQUEST_CONNECT_DEVICE:
@@ -357,19 +392,35 @@ public class BluetoothBattle extends Activity
         }
     }
 
+    public void showDeviceList()
+    {
+        // Launch the DeviceListActivity to see devices and do scan
+        Intent serverIntent = new Intent(this, DeviceListActivity.class);
+        startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
+    }
+
+    public static boolean isNumeric(String str)
+    {
+        try
+        {
+            double d = Double.parseDouble(str);
+        }
+        catch(NumberFormatException nfe)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    // Creation boutons menu
+
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
         return true;
-    }
-
-    public void showDeviceList()
-    {
-        // Launch the DeviceListActivity to see devices and do scan
-        Intent serverIntent = new Intent(this, DeviceListActivity.class);
-        startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
     }
 
     @Override
@@ -387,5 +438,5 @@ public class BluetoothBattle extends Activity
         }
         return false;
     }
-
+    */
 }
