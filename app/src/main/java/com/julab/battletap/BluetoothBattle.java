@@ -46,7 +46,7 @@ public class BluetoothBattle extends Activity
 
     // Intent request codes
     private static final int REQUEST_CONNECT_DEVICE = 1;
-    private static final int REQUEST_ENABLE_BT = 2;
+    public static final int DISCOVERABLE_REQUEST = 2;
 
     // Layout Views
     private Button btnPush;
@@ -253,7 +253,7 @@ public class BluetoothBattle extends Activity
         {
             Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
             discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
-            startActivity(discoverableIntent);
+            startActivityForResult(discoverableIntent, DISCOVERABLE_REQUEST);
         }
     }
 
@@ -387,6 +387,12 @@ public class BluetoothBattle extends Activity
                     BluetoothDevice device = bluetoothAdapter.getRemoteDevice(address);
                     // Attempt to connect to the device
                     battleService.connect(device);
+                }
+                break;
+            case DISCOVERABLE_REQUEST:
+                if(resultCode == 0)
+                {
+                    finish();
                 }
                 break;
         }
