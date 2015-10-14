@@ -42,7 +42,7 @@ public class MenuActivity extends AppCompatActivity
                 
                 if (groupPosition == MULITPLAYER_GROUP && childPosition == FIGHT_THE_TIMES_CHILD)
                 {
-                    Intent intent = new Intent(MenuActivity.this, BluetoothBattle.class);
+                    Intent intent = new Intent(MenuActivity.this, HostClientActivity.class);
                     startActivity(intent);
                 }
                 if (groupPosition == SOLO_GROUP && childPosition == FIGHT_THE_NUMBERS_CHILD)

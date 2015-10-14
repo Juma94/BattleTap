@@ -6,11 +6,11 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
+        android:name=".GlobalData"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name=".GlobalData">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -30,8 +30,9 @@
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".CreateAccountActivity"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".CreateAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name=".PasswordForgottenActivity"
@@ -48,11 +49,16 @@
             android:label="@string/select_device"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".BoardGameSoloActivity"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".BoardGameSoloActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".SummaryBoardGameSoloActivity"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".SummaryBoardGameSoloActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".HostClientActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 

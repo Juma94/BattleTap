@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:2:1-59:12
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:2:1-65:12
 	package
 		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml
@@ -22,7 +22,7 @@ ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:6:5-74
 	android:name
 		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:6:22-71
 application
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:8:5-57:19
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:8:5-63:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.0.1] E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:22:5-20
@@ -30,15 +30,15 @@ MERGED from [com.android.support:support-v4:23.0.1] E:\Android\BattleTap\app\bui
 MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:12:9-41
 	android:allowBackup
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:11:9-43
 	android:theme
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:12:9-40
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:13:9-40
 	android:name
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:9:9-35
 activity#com.julab.battletap.SplashScreenActivity
 ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:14:9-22:20
 	android:theme
@@ -72,47 +72,53 @@ ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:28:9-32:20
 	android:name
 		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:29:13-41
 activity#com.julab.battletap.CreateAccountActivity
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:33:9-35:20
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:33:9-36:20
 	android:theme
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:34:19-62
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:35:13-56
 	android:name
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:33:19-56
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:34:13-50
 activity#com.julab.battletap.PasswordForgottenActivity
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:36:9-40:20
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:37:9-41:20
 	android:label
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:38:13-70
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:39:13-70
 	android:theme
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:39:13-56
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:40:13-56
 	android:name
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:37:13-54
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:38:13-54
 activity#com.julab.battletap.BluetoothBattle
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:41:9-45:20
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:42:9-46:20
 	android:label
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:43:13-45
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:44:13-45
 	android:theme
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:44:13-56
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:45:13-56
 	android:name
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:42:13-44
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:43:13-44
 activity#com.julab.battletap.DeviceListActivity
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:46:9-50:20
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:47:9-51:20
 	android:label
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:48:13-50
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:49:13-50
 	android:theme
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:49:13-56
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:50:13-56
 	android:name
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:47:13-47
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:48:13-47
 activity#com.julab.battletap.BoardGameSoloActivity
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:51:9-53:20
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:52:9-55:20
 	android:theme
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:52:19-62
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:54:13-56
 	android:name
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:51:19-56
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:53:13-50
 activity#com.julab.battletap.SummaryBoardGameSoloActivity
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:54:9-56:20
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:56:9-59:20
 	android:theme
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:55:19-62
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:58:13-56
 	android:name
-		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:54:19-63
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:57:13-57
+activity#com.julab.battletap.HostClientActivity
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:60:9-62:20
+	android:theme
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:61:13-56
+	android:name
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:60:19-53
 uses-sdk
 INJECTED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43

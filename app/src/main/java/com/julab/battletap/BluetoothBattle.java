@@ -176,6 +176,7 @@ public class BluetoothBattle extends Activity
         if (!bluetoothAdapter.isEnabled())
         {
             bluetoothAdapter.enable();
+            while(!bluetoothAdapter.isEnabled());
         }
         else
         {
@@ -200,6 +201,17 @@ public class BluetoothBattle extends Activity
                 // Start the Bluetooth services
                 battleService.start();
             }
+        }
+
+        if(getIntent().getExtras().getBoolean("IsClient"))
+        {
+            showDeviceList();
+            getIntent().putExtra("IsHostSelected", true);
+            getIntent().putExtra("IsClient",false);
+        }
+        else if(!getIntent().getExtras().getBoolean("IsClient") && !getIntent().getExtras().getBoolean("IsHostSelected"))
+        {
+            ensureDiscoverable();
         }
     }
 

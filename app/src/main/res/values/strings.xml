@@ -69,5 +69,8 @@
     <string name="text_penality">"Penality : "</string>
     <string name="text_difference">"Difference : "</string>
     <string name="text_caught">" Caught : "</string>
+    <string name="join_session">Join a session</string>
+    <string name="host_session">Host a session</string>
+    <string name="session_configuration">Session configuration</string>
 
 </resources>
