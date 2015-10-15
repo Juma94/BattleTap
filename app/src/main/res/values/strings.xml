@@ -68,5 +68,7 @@
     <string name="join_session">Join a session</string>
     <string name="host_session">Host a session</string>
     <string name="session_configuration">Session configuration</string>
+    <string name="dialog_number_sequence_title">Number max sequence</string>
+    <string name="config_game_wait">Configuration game, please wait...</string>
 
 </resources>

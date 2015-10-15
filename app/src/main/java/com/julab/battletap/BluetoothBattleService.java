@@ -257,8 +257,12 @@ public class BluetoothBattleService
     {
         setState(STATE_LISTEN);
 
+        // notify to board game that connection was failed
+        Message msg = handler.obtainMessage(BluetoothBattle.CONNECTION_FAILED);
+        handler.sendMessage(msg);
+
         // Send a failure message back to the Activity
-        Message msg = handler.obtainMessage(BluetoothBattle.MESSAGE_TOAST);
+        msg = handler.obtainMessage(BluetoothBattle.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
         bundle.putString(BluetoothBattle.TOAST, "Unable to connect device");
         msg.setData(bundle);
@@ -272,8 +276,12 @@ public class BluetoothBattleService
     {
         setState(STATE_LISTEN);
 
+        // notify to board game that connection was lost
+        Message msg = handler.obtainMessage(BluetoothBattle.CONNECTION_FAILED);
+        handler.sendMessage(msg);
+
         // Send a failure message back to the Activity
-        Message msg = handler.obtainMessage(BluetoothBattle.MESSAGE_TOAST);
+        msg = handler.obtainMessage(BluetoothBattle.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
         bundle.putString(BluetoothBattle.TOAST, "Device connection was lost");
         msg.setData(bundle);

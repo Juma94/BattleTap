@@ -22,12 +22,13 @@ import android.widget.Toast;
 public class BluetoothBattle extends Activity
 {
     // Game variables
-    private int[] TabJeu = new int[0];
+    private int[] tabGame = new int[0];
 
     private TextView nbCaught, nbToCatch, nbTaps;
     private int current = 0, nbCurrentTaps, nbCurrentCaught;
 
-    private AlertDialog waitMessage;
+    private AlertDialog waitMessageConnection;
+    private AlertDialog waitMessageChooseNumber;
 
     // Debugging
     private static final String TAG = "BluetoothBattle";
@@ -39,6 +40,7 @@ public class BluetoothBattle extends Activity
     public static final int MESSAGE_WRITE = 3;
     public static final int MESSAGE_DEVICE_NAME = 4;
     public static final int MESSAGE_TOAST = 5;
+    public static final int CONNECTION_FAILED = 6;
 
     // Key names received from the BluetoothBattleService Handler
     public static final String DEVICE_NAME = "device_name";
@@ -60,6 +62,8 @@ public class BluetoothBattle extends Activity
     private BluetoothAdapter bluetoothAdapter = null;
     // Member object for the chat services
     private BluetoothBattleService battleService = null;
+    // listener bluetooth
+    private ListenBluetoothUnenablingAsync listenerBluetooth;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -113,7 +117,7 @@ public class BluetoothBattle extends Activity
                 if (event.getAction() == MotionEvent.ACTION_UP)
                 {
                     // si fin tableau message Terminer + lancement summarry
-                    if (current < 9)
+                    if (current < tabGame.length)
                     {
                         btnConfirm.setBackgroundResource(R.drawable.btn_valider);
                         current++;
@@ -147,7 +151,10 @@ public class BluetoothBattle extends Activity
                 BluetoothBattle.this.finish();
             }
         });
-        waitMessage = builder.create();
+        waitMessageConnection = builder.create();
+
+        builder.setMessage(R.string.config_game_wait);
+        waitMessageChooseNumber = builder.create();
     }
 
     public void updateNumbers()
@@ -156,10 +163,10 @@ public class BluetoothBattle extends Activity
         nbTaps.setText(nbCurrentTaps + "");
 
         nbCaught = (TextView) findViewById(R.id.board_game_multi_nb_caught_current_id);
-        nbCaught.setText(nbCurrentCaught + "/" + TabJeu.length);
+        nbCaught.setText(nbCurrentCaught + "/" + tabGame.length);
 
         nbToCatch = (TextView) findViewById(R.id.board_game_multi_nb_to_catch_current_id);
-        nbToCatch.setText(TabJeu[current] + "");
+        nbToCatch.setText(tabGame[current] + "");
     }
 
     @Override
@@ -175,7 +182,11 @@ public class BluetoothBattle extends Activity
 
             // wait for bluetoothAdapter enabling
             while (!bluetoothAdapter.isEnabled()) ;
+
+            listenerBluetooth.execute();
+            listenerBluetooth = new ListenBluetoothUnenablingAsync(bluetoothAdapter, mHandler);
         }
+
 
         if (battleService == null) setupGame();
 
@@ -211,7 +222,7 @@ public class BluetoothBattle extends Activity
         else if (!getIntent().getExtras().getBoolean("IsClient") && !getIntent().getExtras().getBoolean("IsHostSelected"))
         {
             ensureDiscoverable();
-            waitMessage.show();
+            waitMessageConnection.show();
         }
     }
 
@@ -229,6 +240,7 @@ public class BluetoothBattle extends Activity
     @Override
     public synchronized void onPause()
     {
+        if(!listenerBluetooth.isCancelled()) listenerBluetooth.cancel(true);
         super.onPause();
         if (isDebuggingMode) Log.e(TAG, "- ON PAUSE -");
     }
@@ -301,6 +313,8 @@ public class BluetoothBattle extends Activity
                         case BluetoothBattleService.STATE_CONNECTING:
                             // here, you can display a message for view that is connected
                             Toast.makeText(getApplicationContext(), "Connecting...", Toast.LENGTH_SHORT).show();
+                            // waiting message for user while host configuring game
+                            waitMessageChooseNumber.show();
                             break;
                         case BluetoothBattleService.STATE_LISTEN:
                         case BluetoothBattleService.STATE_NONE:
@@ -329,7 +343,7 @@ public class BluetoothBattle extends Activity
                     {
                         finish();
                     }
-                    else if(isNumeric(readMessage))
+                    else if (isNumeric(readMessage))
                     {
                         initTabNumber(Integer.parseInt(readMessage));
                     }
@@ -340,7 +354,14 @@ public class BluetoothBattle extends Activity
                     Toast.makeText(getApplicationContext(), "Connected to " + connectedDeviceName, Toast.LENGTH_SHORT).show();
 
                     // dismiss dialog waiting player
-                    waitMessage.dismiss();
+                    if (waitMessageConnection.isShowing())
+                    {
+                        waitMessageConnection.dismiss();
+                    }
+                    else
+                    {
+                        waitMessageChooseNumber.dismiss();
+                    }
 
                     // init tab with a number specified by the host user
                     if (!getIntent().getExtras().getBoolean("IsClient") && !getIntent().getExtras().getBoolean("IsHostSelected"))
@@ -358,6 +379,9 @@ public class BluetoothBattle extends Activity
                         numberPickerDialog.show();
                     }
                     break;
+                case CONNECTION_FAILED:
+                    finish();
+                    break;
                 case MESSAGE_TOAST:
                     Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST), Toast.LENGTH_SHORT).show();
                     break;
@@ -367,10 +391,10 @@ public class BluetoothBattle extends Activity
 
     private void initTabNumber(int n)
     {
-        TabJeu = new int[n];
-        for (int i = 0; i < TabJeu.length; i++)
+        tabGame = new int[n];
+        for (int i = 0; i < tabGame.length; i++)
         {
-            TabJeu[i] = (int) (Math.random() * 100) + 1;
+            tabGame[i] = (int) (Math.random() * 100) + 1;
         }
         updateNumbers();
     }
@@ -393,7 +417,7 @@ public class BluetoothBattle extends Activity
                 }
                 break;
             case DISCOVERABLE_REQUEST:
-                if(resultCode == 0)
+                if (resultCode == 0)
                 {
                     finish();
                 }
@@ -414,7 +438,7 @@ public class BluetoothBattle extends Activity
         {
             double d = Double.parseDouble(str);
         }
-        catch(NumberFormatException nfe)
+        catch (NumberFormatException nfe)
         {
             return false;
         }

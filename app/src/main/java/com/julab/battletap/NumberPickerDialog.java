@@ -29,6 +29,7 @@ public class NumberPickerDialog extends Dialog
     {
         super(context);
         super.setCancelable(false);
+        super.setTitle(R.string.dialog_number_sequence_title);
         this.readyListener = readyListener;
         this.context = context;
         this.list = new ArrayList<String>();
