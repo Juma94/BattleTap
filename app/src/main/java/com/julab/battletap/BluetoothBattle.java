@@ -182,11 +182,10 @@ public class BluetoothBattle extends Activity
 
             // wait for bluetoothAdapter enabling
             while (!bluetoothAdapter.isEnabled()) ;
-
-            listenerBluetooth.execute();
-            listenerBluetooth = new ListenBluetoothUnenablingAsync(bluetoothAdapter, mHandler);
         }
 
+        listenerBluetooth = new ListenBluetoothUnenablingAsync(bluetoothAdapter, mHandler);
+        listenerBluetooth.execute();
 
         if (battleService == null) setupGame();
 
@@ -240,7 +239,7 @@ public class BluetoothBattle extends Activity
     @Override
     public synchronized void onPause()
     {
-        if(!listenerBluetooth.isCancelled()) listenerBluetooth.cancel(true);
+        if(listenerBluetooth != null) listenerBluetooth.cancel(true);
         super.onPause();
         if (isDebuggingMode) Log.e(TAG, "- ON PAUSE -");
     }

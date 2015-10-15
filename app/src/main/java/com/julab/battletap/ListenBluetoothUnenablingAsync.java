@@ -13,15 +13,18 @@ public class ListenBluetoothUnenablingAsync extends AsyncTask
 {
     private BluetoothAdapter bluetoothAdapter;
     private Handler handler;
+    private boolean isStoped = true;
 
     public ListenBluetoothUnenablingAsync(BluetoothAdapter bluetoothAdapter, Handler handler)
     {
         this.bluetoothAdapter = bluetoothAdapter;
         this.handler = handler;
     }
+
     @Override
     protected Object doInBackground(Object[] params)
     {
+        isStoped = false;
         while(bluetoothAdapter.isEnabled());
 
         // notify to board game that connection was lost
@@ -36,5 +39,24 @@ public class ListenBluetoothUnenablingAsync extends AsyncTask
         handler.sendMessage(msg);
 
         return null;
+    }
+
+    @Override
+    protected void onCancelled()
+    {
+        super.onCancelled();
+        isStoped = true;
+    }
+
+    @Override
+    protected void onCancelled(Object o)
+    {
+        super.onCancelled(o);
+        isStoped = true;
+    }
+
+    public boolean isStoped()
+    {
+        return isStoped;
     }
 }
