@@ -16,6 +16,5 @@ public class FinalizeCreateAccountActivity extends AppCompatActivity {
 
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Question, android.R.layout.simple_spinner_item);
         secretQSpinner.setAdapter(adapter);
-        setTitle("Bonjour");
     }
 }
