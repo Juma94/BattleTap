@@ -72,5 +72,17 @@
     <string name="config_game_wait">Configuration game, please wait...</string>
     <string name="choose_max_number">Please choose a max number</string>
     <string name="activity_create_account_btnNext_text">Next</string>
+    <string name="activity_finalize_create_account_radioButtonMale_text">M</string>
+    <string name="activity_finalize_create_account_radioButtonFemale_text">F</string>
+    <string name="activity_finalize_create_account_sexe_text">Sexe</string>
+    <string name="activity_finalize_create_account_secret_response_hint">Secret response</string>
+    <string name="activity_finalize_create_account_btnFinalize_text">Finalize creating account</string>
 
+
+    <!--Test-->
+    <string-array name="Question">
+        <item>Quelle est votre couleur préférée?</item>
+        <item>Combien de soeur avez-vous?</item>
+        <item>Quel est le surnom de votre enfance?</item>
+    </string-array>
 </resources>

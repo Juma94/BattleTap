@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="23"
         android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -38,7 +38,7 @@
         </activity>
         <activity
             android:name="com.julab.battletap.CreateAccountActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
             android:name="com.julab.battletap.PasswordForgottenActivity"
@@ -66,6 +66,12 @@
         <activity
             android:name="com.julab.battletap.HostClientActivity"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.julab.battletap.FinalizeCreateAccountActivity"
+            android:label="Création du compte"
+            android:theme="@style/CustomActionBarTheme" >
+            android:windowSoftInputMode="adjustResize">
         </activity>
     </application>
 

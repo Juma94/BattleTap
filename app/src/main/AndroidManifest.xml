@@ -32,7 +32,7 @@
         </activity>
         <activity
             android:name=".CreateAccountActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:windowSoftInputMode="adjustResize">
         </activity>
         <activity
             android:name=".PasswordForgottenActivity"
@@ -61,7 +61,11 @@
             android:name=".HostClientActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".FinalizeCreateAccountActivity" >
+        <activity
+            android:name=".FinalizeCreateAccountActivity"
+            android:label="Création du compte"
+            android:theme="@style/CustomActionBarTheme" >
+            android:windowSoftInputMode="adjustResize">
         </activity>
     </application>
 
