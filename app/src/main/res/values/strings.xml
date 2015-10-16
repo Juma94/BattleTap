@@ -71,5 +71,6 @@
     <string name="dialog_number_sequence_title">Number max sequence</string>
     <string name="config_game_wait">Configuration game, please wait...</string>
     <string name="choose_max_number">Please choose a max number</string>
+    <string name="activity_create_account_btnNext_text">Next</string>
 
 </resources>

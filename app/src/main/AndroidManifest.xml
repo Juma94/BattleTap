@@ -57,8 +57,11 @@
             android:name=".SummaryBoardGameSoloActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".HostClientActivity"
+        <activity
+            android:name=".HostClientActivity"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".FinalizeCreateAccountActivity" >
         </activity>
     </application>
 
