@@ -30,9 +30,9 @@ public class BoardGameSoloActivity extends AppCompatActivity
         ClickListener listenerObj = new ClickListener();
 
         // init var to find the first random number
-        int increment = (int) (Math.random() * 101);
-        int multiplier = (int) (Math.random() * 101);
-        int germ = (int) (Math.random() * 101);
+        int increment = (int) (Math.random() * 100);
+        int multiplier = (int) (Math.random() * 100);
+        int germ = (int) (Math.random() * 100);
 
         // init a list to save random numbers
         tabNumbersCaught = new ArrayList<>();
@@ -58,8 +58,8 @@ public class BoardGameSoloActivity extends AppCompatActivity
 
     public void fillTabNumbers()
     {
-        int increment = (int) (Math.random() * 101);
-        int multiplier = (int) (Math.random() * 101);
+        int increment = (int) (Math.random() * 100);
+        int multiplier = (int) (Math.random() * 100);
 
         tabNumbersCaught.add(randomNumber(tabNumbersCaught.get(current - 1), multiplier, increment));
     }

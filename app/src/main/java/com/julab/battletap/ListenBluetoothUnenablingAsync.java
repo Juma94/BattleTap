@@ -51,8 +51,8 @@ public class ListenBluetoothUnenablingAsync extends AsyncTask
     @Override
     protected void onCancelled(Object o)
     {
-        super.onCancelled(o);
         isStoped = true;
+        super.onCancelled(o);
     }
 
     public boolean isStoped()

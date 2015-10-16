@@ -70,5 +70,6 @@
     <string name="session_configuration">Session configuration</string>
     <string name="dialog_number_sequence_title">Number max sequence</string>
     <string name="config_game_wait">Configuration game, please wait...</string>
+    <string name="choose_max_number">Please choose a max number</string>
 
 </resources>

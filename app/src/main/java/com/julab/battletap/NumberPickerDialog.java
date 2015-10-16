@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
 
-import java.util.ArrayList;
-
 /**
  * Created by Abdelhamid on 14/10/2015.
  */
@@ -16,13 +14,10 @@ public class NumberPickerDialog extends Dialog
 {
     public interface DialogListener
     {
-        public void okButtonPressed(int n);
+        void okButtonPressed(int n);
     }
 
-    private ArrayList<String> list;
-    private Context context;
     private NumberPicker numberPicker;
-
     private DialogListener readyListener;
 
     public NumberPickerDialog(Context context, DialogListener readyListener)
@@ -31,8 +26,6 @@ public class NumberPickerDialog extends Dialog
         super.setCancelable(false);
         super.setTitle(R.string.dialog_number_sequence_title);
         this.readyListener = readyListener;
-        this.context = context;
-        this.list = new ArrayList<String>();
     }
 
     @Override

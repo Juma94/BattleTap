@@ -30,7 +30,7 @@ public class SplashScreenActivity extends AppCompatActivity
             @Override
             public void onAnimationStart(Animation animation)
             {
-                return;
+
             }
 
             @Override
@@ -58,9 +58,10 @@ public class SplashScreenActivity extends AppCompatActivity
         v.startAnimation(a);
     }
 
+    // desable back button with not call super method
     @Override
     public void onBackPressed()
     {
-        return;
+
     }
 }

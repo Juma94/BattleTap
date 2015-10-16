@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 public class SummaryBoardGameSoloActivity extends AppCompatActivity
 {
-    private GlobalData globalData;
-    private ListView summaryList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

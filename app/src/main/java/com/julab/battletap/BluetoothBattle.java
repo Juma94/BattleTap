@@ -48,7 +48,7 @@ public class BluetoothBattle extends Activity
 
     // Intent request codes
     private static final int REQUEST_CONNECT_DEVICE = 1;
-    public static final int DISCOVERABLE_REQUEST = 2;
+    private static final int DISCOVERABLE_REQUEST = 2;
 
     // Layout Views
     private Button btnPush;
@@ -56,8 +56,6 @@ public class BluetoothBattle extends Activity
 
     // Name of the connected device
     private String connectedDeviceName = null;
-    // String buffer for outgoing messages
-    private StringBuffer outStringBuffer;
     // Local Bluetooth adapter
     private BluetoothAdapter bluetoothAdapter = null;
     // Member object for the chat services
@@ -157,7 +155,7 @@ public class BluetoothBattle extends Activity
         waitMessageChooseNumber = builder.create();
     }
 
-    public void updateNumbers()
+    private void updateNumbers()
     {
         nbTaps = (TextView) findViewById(R.id.board_game_multi_nbTaps_id);
         nbTaps.setText(nbCurrentTaps + "");
@@ -184,11 +182,11 @@ public class BluetoothBattle extends Activity
             while (!bluetoothAdapter.isEnabled()) ;
         }
 
+        // execute a thread listener for bluetooth adapter
         listenerBluetooth = new ListenBluetoothUnenablingAsync(bluetoothAdapter, mHandler);
         listenerBluetooth.execute();
 
         if (battleService == null) setupGame();
-
     }
 
     @Override
@@ -231,9 +229,6 @@ public class BluetoothBattle extends Activity
 
         // Initialize the BluetoothBattleService to perform bluetooth connections
         battleService = new BluetoothBattleService(this, mHandler);
-
-        // Initialize the buffer for outgoing messages
-        outStringBuffer = new StringBuffer("");
     }
 
     @Override
@@ -424,14 +419,14 @@ public class BluetoothBattle extends Activity
         }
     }
 
-    public void showDeviceList()
+    private void showDeviceList()
     {
         // Launch the DeviceListActivity to see devices and do scan
         Intent serverIntent = new Intent(this, DeviceListActivity.class);
         startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
     }
 
-    public static boolean isNumeric(String str)
+    private boolean isNumeric(String str)
     {
         try
         {
