@@ -75,6 +75,11 @@
             android:theme="@style/CustomActionBarTheme"
             android:windowSoftInputMode="adjustResize" >
         </activity>
+        <activity
+            android:name="com.julab.battletap.ScoreActivity"
+            android:label="@string/title_activity_score"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

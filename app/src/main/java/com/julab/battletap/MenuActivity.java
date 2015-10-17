@@ -22,6 +22,8 @@ public class MenuActivity extends AppCompatActivity
         private final int FIGHT_THE_INCREMENT_CHILD = 1;
         private final int FIGHT_THE_BOTH_CHILD = 2;
 
+    private final int SCORE_GROUP = 2;
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -34,20 +36,21 @@ public class MenuActivity extends AppCompatActivity
         expandListAdapter = new ExpandListAdapter(MenuActivity.this, expandListItems);
         expandList.setAdapter(expandListAdapter);
         // set item listener
-        expandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener()
-        {
+        expandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
-            {
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
-                if (groupPosition == MULITPLAYER_GROUP && childPosition == FIGHT_THE_TIMES_CHILD)
-                {
+                if (groupPosition == MULITPLAYER_GROUP && childPosition == FIGHT_THE_TIMES_CHILD) {
                     Intent intent = new Intent(MenuActivity.this, HostClientActivity.class);
                     startActivity(intent);
                 }
-                if (groupPosition == SOLO_GROUP && childPosition == FIGHT_THE_NUMBERS_CHILD)
-                {
+                if (groupPosition == SOLO_GROUP && childPosition == FIGHT_THE_NUMBERS_CHILD) {
                     Intent intent = new Intent(MenuActivity.this, BoardGameSoloActivity.class);
+                    startActivity(intent);
+                }
+                if (groupPosition == SCORE_GROUP  && childPosition == 0)
+                {
+                    Intent intent = new Intent(MenuActivity.this, ScoreActivity.class);
                     startActivity(intent);
                 }
                 return true;
@@ -115,8 +118,23 @@ public class MenuActivity extends AppCompatActivity
 
         group2.setItems(listChild);
 
+        listChild = new ArrayList<>();
+
+        ExpandListGroup group3 = new ExpandListGroup();
+        group3.setName("Score");
+
+        ExpandListChild child1Group3 = new ExpandListChild();
+        child1Group3.setName("Show scores");
+        child1Group3.setTag(null);
+
+        listChild.add(child1Group3);
+
+        group3.setItems(listChild);
+
+
         listGroup.add(group1);
         listGroup.add(group2);
+        listGroup.add(group3);
 
 
         return listGroup;
