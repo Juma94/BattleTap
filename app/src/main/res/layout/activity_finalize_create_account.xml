@@ -16,9 +16,10 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button"
-            android:layout_gravity="right" />
+            android:text="@string/activity_finalize_create_account_btnFinalize_text"
+            android:id="@+id/activity_finalize_create_account_btnFinalize_id"
+            android:layout_gravity="right"
+            android:background="@drawable/background_btncreating_account" />
     </LinearLayout>
 
     <LinearLayout
@@ -86,7 +87,7 @@
                     android:text="@string/activity_finalize_create_account_radioButtonMale_text"
                     android:textColor="#ffffff"
                     android:id="@+id/activity_finalize_create_account_radioButtonMale_id"
-                    android:checked="false"
+                    android:checked="true"
                     android:layout_weight="0.55" />
 
                 <RadioButton
