@@ -2,7 +2,6 @@
     <string name="app_name">Battle Tap</string>
 
     <!--  Create Account Activity -->
-    <string name="create_account_actionBar_title">Creating account</string>
     <string name="createAccountButton">Create</string>
     <string name="activity_create_account_editText_pseudo_text">Pseudo</string>
     <string name="activity_create_account_pwd_editText_text">Password</string>
@@ -10,10 +9,7 @@
     <string name="activity_create_account_title_text">Create Account</string>
     <string name="activity_create_account_EditText_Email_hint_text">Email</string>
 
-    <!--  Finalize Account Activity -->
-    <string name="finalize_account_actionBar_title">Finalization account</string>
-
-    <!--  BluetoothBattle -->
+    <!--  BoardGameMultiActivity -->
     <string name="send">Send</string>
     <string name="not_connected">You are not connected to a device</string>
     <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
@@ -75,51 +71,5 @@
     <string name="dialog_number_sequence_title">Number max sequence</string>
     <string name="config_game_wait">Configuration game, please wait...</string>
     <string name="choose_max_number">Please choose a max number</string>
-    <string name="activity_create_account_btnNext_text">Next</string>
-    <string name="activity_finalize_create_account_radioButtonMale_text">M</string>
-    <string name="activity_finalize_create_account_radioButtonFemale_text">F</string>
-    <string name="activity_finalize_create_account_sexe_text">Sexe</string>
-    <string name="activity_finalize_create_account_secret_response_hint">Secret response</string>
-    <string name="activity_finalize_create_account_btnFinalize_text">Finalize</string>
-    <string name="we_miss_you_toast">We missed you</string>
 
-
-    <!--Test-->
-    <string-array name="Question">
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-        <item>What\'s your favorite color?</item>
-        <item>How many sisters do you have?</item>
-        <item>What is the nickname of your childhood ?</item>
-    </string-array>
-    <string name="title_activity_score">ScoreActivity</string>
-    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
