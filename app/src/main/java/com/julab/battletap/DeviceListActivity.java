@@ -186,6 +186,17 @@ public class DeviceListActivity extends Activity
         }
     };
 
+    @Override
+    public void onBackPressed()
+    {
+        // Create the result Intent and include the MAC address
+        Intent intent = new Intent();
+
+        // Set result and finish this Activity
+        setResult(Activity.RESULT_CANCELED, intent);
+        super.onBackPressed();
+    }
+
     // The BroadcastReceiver that listens for discovered devices and
     // changes the title when discovery is finished
     private final BroadcastReceiver mReceiver = new BroadcastReceiver()
