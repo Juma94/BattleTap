@@ -39,7 +39,7 @@ public class NumberPickerDialog extends Dialog
         numberPicker.setMinValue(10);
 
         Button buttonOK = (Button) findViewById(R.id.dialogOK);
-        buttonOK.setOnClickListener(new android.view.View.OnClickListener()
+        buttonOK.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
             {

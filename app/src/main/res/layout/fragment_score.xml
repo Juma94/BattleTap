@@ -13,10 +13,11 @@
         android:layout_alignParentEnd="true">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Text"
             android:id="@+id/textView2frScore"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="50dp" />
     </LinearLayout>
 </RelativeLayout>
