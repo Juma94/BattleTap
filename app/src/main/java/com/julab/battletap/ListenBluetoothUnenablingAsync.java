@@ -28,13 +28,13 @@ public class ListenBluetoothUnenablingAsync extends AsyncTask
         while(bluetoothAdapter.isEnabled());
 
         // notify to board game that connection was lost
-        Message msg = handler.obtainMessage(BluetoothBattle.CONNECTION_FAILED);
+        Message msg = handler.obtainMessage(BoardGameMultiActivity.CONNECTION_FAILED);
         handler.sendMessage(msg);
 
         // Send a failure message back to the Activity
-        msg = handler.obtainMessage(BluetoothBattle.MESSAGE_TOAST);
+        msg = handler.obtainMessage(BoardGameMultiActivity.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
-        bundle.putString(BluetoothBattle.TOAST, "Bluetooth adapter was desabled");
+        bundle.putString(BoardGameMultiActivity.TOAST, "Bluetooth adapter was desabled");
         msg.setData(bundle);
         handler.sendMessage(msg);
 

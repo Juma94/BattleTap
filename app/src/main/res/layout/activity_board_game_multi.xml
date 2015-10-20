@@ -105,6 +105,16 @@
             android:layout_alignEnd="@+id/btnPush"
             android:background="@drawable/btn_valider" />
 
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chrono_multi"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="70dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"/>
+
     </LinearLayout>
 
 </RelativeLayout>

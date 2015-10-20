@@ -13,7 +13,7 @@
     <!--  Finalize Account Activity -->
     <string name="finalize_account_actionBar_title">Finalization account</string>
 
-    <!--  BluetoothBattle -->
+    <!--  BoardGameMultiActivity -->
     <string name="send">Send</string>
     <string name="not_connected">You are not connected to a device</string>
     <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
@@ -122,4 +122,6 @@
     </string-array>
     <string name="title_activity_score">ScoreActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="number_to_catch">Nombre à atteindre</string>
+    <string name="number_of_caught_numbers">Nb Nombres Atteints</string>
 </resources>
