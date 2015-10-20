@@ -115,8 +115,19 @@ public class MenuActivity extends AppCompatActivity
 
         group2.setItems(listChild);
 
+        ExpandListGroup group3 = new ExpandListGroup();
+        group1.setName("Scores");
+
+        ExpandListChild child3Group1 = new ExpandListChild();
+        child1Group1.setName("Show scores");
+        child1Group1.setTag(null);
+
+        listChild.add(child3Group1);
+        group1.setItems(listChild);
+
         listGroup.add(group1);
         listGroup.add(group2);
+        listGroup.add(group3);
 
 
         return listGroup;
