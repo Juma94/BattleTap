@@ -22,6 +22,9 @@ public class MenuActivity extends AppCompatActivity
         private final int FIGHT_THE_INCREMENT_CHILD = 1;
         private final int FIGHT_THE_BOTH_CHILD = 2;
 
+    private final int SCORE_GROUP = 2;
+        private final int SCORE_CHILD = 0;
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -48,6 +51,11 @@ public class MenuActivity extends AppCompatActivity
                 if (groupPosition == SOLO_GROUP && childPosition == FIGHT_THE_NUMBERS_CHILD)
                 {
                     Intent intent = new Intent(MenuActivity.this, BoardGameSoloActivity.class);
+                    startActivity(intent);
+                }
+                if(groupPosition == SCORE_GROUP && childPosition == SCORE_CHILD)
+                {
+                    Intent intent = new Intent(MenuActivity.this, ScoreActivity.class);
                     startActivity(intent);
                 }
                 return true;
