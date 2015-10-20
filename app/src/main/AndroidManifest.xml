@@ -32,10 +32,12 @@
         </activity>
         <activity
             android:name=".CreateAccountActivity"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/CustomActionBarTheme" >
         </activity>
         <activity
             android:name=".FinalizeCreateAccountActivity"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/CustomActionBarTheme" >
         </activity>
         <activity
@@ -65,6 +67,7 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity android:name=".ScoreActivity"
+
             android:theme="@style/AppTheme.AppBarOverlay">
         </activity>
 
