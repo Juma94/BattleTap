@@ -60,6 +60,9 @@
         <activity android:name=".HostClientActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity android:name=".ScoreActivity">
+        </activity>
+
     </application>
 
 </manifest>
