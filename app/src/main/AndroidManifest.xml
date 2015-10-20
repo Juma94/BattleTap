@@ -32,7 +32,11 @@
         </activity>
         <activity
             android:name=".CreateAccountActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".FinalizeCreateAccountActivity"
+            android:theme="@style/CustomActionBarTheme" >
         </activity>
         <activity
             android:name=".PasswordForgottenActivity"
@@ -60,7 +64,8 @@
         <activity android:name=".HostClientActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".ScoreActivity">
+        <activity android:name=".ScoreActivity"
+            android:theme="@style/AppTheme.AppBarOverlay">
         </activity>
 
     </application>

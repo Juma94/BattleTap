@@ -67,7 +67,9 @@
             android:name="com.julab.battletap.HostClientActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name="com.julab.battletap.ScoreActivity" >
+        <activity
+            android:name="com.julab.battletap.ScoreActivity"
+            android:theme="@style/AppTheme.AppBarOverlay" >
         </activity>
     </application>
 
