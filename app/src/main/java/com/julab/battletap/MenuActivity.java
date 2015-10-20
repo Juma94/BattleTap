@@ -127,11 +127,11 @@ public class MenuActivity extends AppCompatActivity
         group1.setName("Scores");
 
         ExpandListChild child1Group3 = new ExpandListChild();
-        child1Group1.setName("Show scores");
-        child1Group1.setTag(null);
+        child1Group3.setName("Show scores");
+        child1Group3.setTag(null);
 
         listChild.add(child1Group3);
-        group1.setItems(listChild);
+        group3.setItems(listChild);
 
         listGroup.add(group1);
         listGroup.add(group2);
