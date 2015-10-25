@@ -55,7 +55,7 @@ public class MenuActivity extends AppCompatActivity
                 }
                 if(groupPosition == SCORE_GROUP && childPosition == SCORE_CHILD)
                 {
-                    Intent intent = new Intent(MenuActivity.this, ScoreActivity.class);
+                    Intent intent = new Intent(MenuActivity.this, ScoreSoloActivity.class);
                     startActivity(intent);
                 }
                 return true;

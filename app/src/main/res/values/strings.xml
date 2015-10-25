@@ -124,4 +124,6 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="number_to_catch">Nombre à atteindre</string>
     <string name="number_of_caught_numbers">Nb Nombres Atteints</string>
+    <string name="title_activity_score_solo">ScoreSoloActivity</string>
+    <string name="activity_score_solo_fragment_title_text">Your scores in the Solo Mode</string>
 </resources>

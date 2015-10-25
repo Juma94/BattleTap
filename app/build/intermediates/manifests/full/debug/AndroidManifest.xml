@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="13"
         android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -74,8 +74,9 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name="com.julab.battletap.ScoreActivity"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+            android:name="com.julab.battletap.ScoreSoloActivity"
+            android:label="@string/title_activity_score_solo"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 

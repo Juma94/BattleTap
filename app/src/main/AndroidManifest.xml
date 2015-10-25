@@ -32,13 +32,13 @@
         </activity>
         <activity
             android:name=".CreateAccountActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/CustomActionBarTheme" >
+            android:theme="@style/CustomActionBarTheme"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
             android:name=".FinalizeCreateAccountActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/CustomActionBarTheme" >
+            android:theme="@style/CustomActionBarTheme"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
             android:name=".PasswordForgottenActivity"
@@ -63,14 +63,15 @@
             android:name=".SummaryBoardGameSoloActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".HostClientActivity"
+        <activity
+            android:name=".HostClientActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".ScoreActivity"
-
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity
+            android:name=".ScoreSoloActivity"
+            android:label="@string/title_activity_score_solo"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-
     </application>
 
 </manifest>
