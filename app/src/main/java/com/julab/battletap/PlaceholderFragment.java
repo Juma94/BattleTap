@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
 /**
@@ -21,6 +22,9 @@ public class PlaceholderFragment extends Fragment {
      * Returns a new instance of this fragment for the given section
      * number.
      */
+    private ListView scoreSoloLst;
+
+
     public static PlaceholderFragment newInstance(int sectionNumber) {
         PlaceholderFragment fragment = new PlaceholderFragment();
         Bundle args = new Bundle();
@@ -36,6 +40,8 @@ public class PlaceholderFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_score_solo, container, false);
+        scoreSoloLst = (ListView)rootView.findViewById(R.id.listView_score_solo);
+        scoreSoloLst.setAdapter(new ScoreSoloListAdapter(PlaceholderFragment.this.getContext(), R.layout.expand_list_perso_scores));
         return rootView;
     }
 }

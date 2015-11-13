@@ -7,23 +7,25 @@
     tools:context="com.julab.battletap.ScoreSoloActivity$PlaceholderFragment"
     android:background="@drawable/fond_battletap">
 
-    <TextView
+    <com.julab.battletap.CustomTextViewRankingScoreSolo
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="HelloWorld"
-        android:id="@+id/textView2"
-        android:textSize="50dp"
+        android:text="@string/score_personnel_text"
+        android:id="@+id/score_perso_id"
+        android:textSize="40dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff" />
 
-    <ImageView
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView3"
-        android:background="@drawable/splashscreen"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/listView_score_solo"
+        android:layout_below="@+id/score_perso_id"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView2" />
+        android:layout_marginTop="20dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
 
 </RelativeLayout>

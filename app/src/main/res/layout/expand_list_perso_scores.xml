@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score_solo_couronne_id"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/couronne_final"
+        android:layout_marginTop="10dp" />
+
+    <com.julab.battletap.CustomTextViewRankingScoreSolo
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/score_solo_couronne_id"
+        android:layout_alignRight="@+id/score_solo_couronne_id"
+        android:layout_alignEnd="@+id/score_solo_couronne_id"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="20dp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Diff : 12"
+        android:id="@+id/di_score_solo"
+        android:textStyle="italic"
+        android:textSize="10dp"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.julab.battletap.CustomTextViewScorePerso
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="12 min 25 sec"
+        android:id="@+id/temps_score_solo"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/score_solo_couronne_id"
+        android:layout_toEndOf="@+id/score_solo_couronne_id"
+        android:textSize="30dp"
+        android:textColor="#e66e0d"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ratio : 0.52"
+        android:id="@+id/ratio_score_solo"
+        android:layout_alignBottom="@+id/score_solo_couronne_id"
+        android:layout_toRightOf="@+id/score_solo_couronne_id"
+        android:layout_toEndOf="@+id/score_solo_couronne_id"
+        android:textStyle="italic"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
