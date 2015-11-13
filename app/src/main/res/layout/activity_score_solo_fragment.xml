@@ -5,13 +5,14 @@
     android:background="@drawable/fond_battletap"
     android:weightSum="1">
 
-    <TextView
+    <com.julab.battletap.CustomTextViewRankingScoreSolo
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/activity_score_solo_fragment_title_text"
+        android:text="@string/activity_score_solo_ranking_title_text"
         android:id="@+id/activity_score_solo_fragment_title"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff" />
 
     <ImageView
         android:layout_width="wrap_content"
