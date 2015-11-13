@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="1"
+        android:text="10"
         android:id="@+id/textView2"
         android:layout_alignBottom="@+id/score_solo_couronne_id"
         android:layout_alignRight="@+id/score_solo_couronne_id"
@@ -35,11 +35,11 @@
         android:text="Diff : 12"
         android:id="@+id/di_score_solo"
         android:textStyle="italic"
-        android:textSize="10dp"
         android:textColor="#ffffff"
         android:layout_alignBottom="@+id/textView2"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp" />
 
     <com.julab.battletap.CustomTextViewScorePerso
         android:layout_width="wrap_content"
