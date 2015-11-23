@@ -21,7 +21,7 @@ public class HostClientActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(HostClientActivity.this, BoardGameMultiActivity.class);
+                Intent intent = new Intent(HostClientActivity.this, BoardGameMultiFTActivity.class);
                 intent.putExtra("IsClient", false);
                 intent.putExtra("IsHostSelected", false);
                 startActivity(intent);
@@ -33,7 +33,7 @@ public class HostClientActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(HostClientActivity.this, BoardGameMultiActivity.class);
+                Intent intent = new Intent(HostClientActivity.this, BoardGameMultiFTActivity.class);
                 intent.putExtra("IsClient", true);
                 startActivity(intent);
             }

@@ -13,6 +13,8 @@ public class GlobalData extends android.app.Application
     private ArrayList<Integer> tabNumbersTaps;
     private Chronometer chrono;
 
+    private SummaryInfo summaryInfo;
+
     public ArrayList<Integer> getTabNumbersCaught()
     {
         return tabNumbersCaught;
@@ -46,5 +48,15 @@ public class GlobalData extends android.app.Application
     public boolean isLastItem(int position)
     {
         return position == tabNumbersTaps.size();
+    }
+
+    public SummaryInfo getSummaryInfo()
+    {
+        return summaryInfo;
+    }
+
+    public void setSummaryInfo(SummaryInfo summaryInfo)
+    {
+        this.summaryInfo = summaryInfo;
     }
 }

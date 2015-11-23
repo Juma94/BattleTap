@@ -13,13 +13,14 @@ public class SummaryInfo
     private Chronometer totalTime;
     private int totalDifference;
 
-    public SummaryInfo(String pseudo, double ratio, int totalNumberCaught, Chronometer totalTime, int totalDifference)
+    public SummaryInfo(String pseudo, int totalNumberCaught, Chronometer totalTime, int totalDifference)
     {
         this.pseudo = pseudo;
-        this.ratio = ratio;
         this.totalNumberCaught = totalNumberCaught;
         this.totalTime = totalTime;
         this.totalDifference = totalDifference;
+
+        ratio = totalNumberCaught != 0 ? totalDifference/totalNumberCaught : 0;
     }
 
     public String getPseudo()
@@ -35,11 +36,6 @@ public class SummaryInfo
     public double getRatio()
     {
         return ratio;
-    }
-
-    public void setRatio(double ratio)
-    {
-        this.ratio = ratio;
     }
 
     public int getTotalNumberCaught()

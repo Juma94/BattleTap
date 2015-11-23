@@ -127,4 +127,5 @@
     <string name="title_activity_score_solo">ScoreSoloActivity</string>
     <string name="activity_score_solo_ranking_title_text">Ranking</string>
     <string name="score_personnel_text">Scores perso</string>
+    <string name="title_activity_summary_board_game_multi">Summary Multi</string>
 </resources>

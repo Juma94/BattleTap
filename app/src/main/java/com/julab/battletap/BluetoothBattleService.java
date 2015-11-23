@@ -64,7 +64,7 @@ public class BluetoothBattleService
     public static final int STATE_CONNECTED = 3;  // now connected to a remote device
 
     /**
-     * Constructor. Prepares a new BoardGameMultiActivity session.
+     * Constructor. Prepares a new BoardGameMultiFTActivity session.
      *
      * @param context The UI Activity Context
      * @param handler A Handler to send messages back to the UI Activity
@@ -87,7 +87,7 @@ public class BluetoothBattleService
         this.state = state;
 
         // Give the new state to the Handler so the UI Activity can update
-        handler.obtainMessage(BoardGameMultiActivity.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
+        handler.obtainMessage(BoardGameMultiFTActivity.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
     }
 
     /**
@@ -197,9 +197,9 @@ public class BluetoothBattleService
         connectedThread.start();
 
         // Send the name of the connected device back to the UI Activity
-        Message msg = handler.obtainMessage(BoardGameMultiActivity.MESSAGE_DEVICE_NAME);
+        Message msg = handler.obtainMessage(BoardGameMultiFTActivity.MESSAGE_DEVICE_NAME);
         Bundle bundle = new Bundle();
-        bundle.putString(BoardGameMultiActivity.DEVICE_NAME, device.getName());
+        bundle.putString(BoardGameMultiFTActivity.DEVICE_NAME, device.getName());
         msg.setData(bundle);
         handler.sendMessage(msg);
 
@@ -258,13 +258,13 @@ public class BluetoothBattleService
         setState(STATE_LISTEN);
 
         // notify to board game that connection was failed
-        Message msg = handler.obtainMessage(BoardGameMultiActivity.CONNECTION_FAILED);
+        Message msg = handler.obtainMessage(BoardGameMultiFTActivity.CONNECTION_FAILED);
         handler.sendMessage(msg);
 
         // Send a failure message back to the Activity
-        msg = handler.obtainMessage(BoardGameMultiActivity.MESSAGE_TOAST);
+        msg = handler.obtainMessage(BoardGameMultiFTActivity.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
-        bundle.putString(BoardGameMultiActivity.TOAST, "Unable to connect device");
+        bundle.putString(BoardGameMultiFTActivity.TOAST, "Unable to connect device");
         msg.setData(bundle);
         handler.sendMessage(msg);
     }
@@ -277,13 +277,13 @@ public class BluetoothBattleService
         setState(STATE_LISTEN);
 
         // notify to board game that connection was lost
-        Message msg = handler.obtainMessage(BoardGameMultiActivity.CONNECTION_FAILED);
+        Message msg = handler.obtainMessage(BoardGameMultiFTActivity.CONNECTION_FAILED);
         handler.sendMessage(msg);
 
         // Send a failure message back to the Activity
-        msg = handler.obtainMessage(BoardGameMultiActivity.MESSAGE_TOAST);
+        msg = handler.obtainMessage(BoardGameMultiFTActivity.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
-        bundle.putString(BoardGameMultiActivity.TOAST, "Device connection was lost");
+        bundle.putString(BoardGameMultiFTActivity.TOAST, "Device connection was lost");
         msg.setData(bundle);
         handler.sendMessage(msg);
     }
@@ -511,7 +511,7 @@ public class BluetoothBattleService
                     bytes = mmInStream.read(buffer);
 
                     // Send the obtained bytes to the UI Activity
-                    handler.obtainMessage(BoardGameMultiActivity.MESSAGE_READ, bytes, -1, buffer)
+                    handler.obtainMessage(BoardGameMultiFTActivity.MESSAGE_READ, bytes, -1, buffer)
                             .sendToTarget();
                 }
                 catch (IOException e)
@@ -535,7 +535,7 @@ public class BluetoothBattleService
                 mmOutStream.write(buffer);
 
                 // Share the sent message back to the UI Activity
-                handler.obtainMessage(BoardGameMultiActivity.MESSAGE_WRITE, -1, -1, buffer).sendToTarget();
+                handler.obtainMessage(BoardGameMultiFTActivity.MESSAGE_WRITE, -1, -1, buffer).sendToTarget();
             }
             catch (IOException e)
             {
