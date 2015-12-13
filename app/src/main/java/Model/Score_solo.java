@@ -61,4 +61,9 @@ public class Score_solo {
     public void setIdJoueur(Integer idJoueur) {
         this.idJoueur = idJoueur;
     }
+
+    public String toString()
+    {
+        return "temps = " + temps;
+    }
 }
