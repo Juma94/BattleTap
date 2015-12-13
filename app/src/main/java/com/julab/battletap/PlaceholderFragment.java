@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -41,7 +40,7 @@ public class PlaceholderFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_score_solo, container, false);
         scoreSoloLst = (ListView)rootView.findViewById(R.id.listView_score_solo);
-        scoreSoloLst.setAdapter(new ScoreSoloListAdapter(PlaceholderFragment.this.getContext(), R.layout.expand_list_perso_scores));
+        scoreSoloLst.setAdapter(new ScorePersoListAdapter(PlaceholderFragment.this.getContext(), R.layout.expand_list_perso_scores));
         return rootView;
     }
 }

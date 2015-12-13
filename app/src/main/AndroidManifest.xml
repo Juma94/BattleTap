@@ -72,6 +72,8 @@
             android:label="@string/title_activity_score_solo"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity android:name=".ScorePersoActivity" >
+        </activity>
     </application>
 
 </manifest>
