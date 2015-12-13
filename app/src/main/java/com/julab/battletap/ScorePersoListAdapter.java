@@ -10,14 +10,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ScorePersoListAdapter extends ArrayAdapter
+import java.util.ArrayList;
+
+import Model.Score_solo;
+
+public class ScorePersoListAdapter extends ArrayAdapter<Score_solo>
 {
 
-    public ScorePersoListAdapter(Context context, int resource)
-    {
-        super(context, resource);
+    public ScorePersoListAdapter(Context context, ArrayList<Score_solo> scores) {
+        super(context, 0, scores);
     }
-
     public int getCount()
     {
         return 10;
@@ -26,18 +28,21 @@ public class ScorePersoListAdapter extends ArrayAdapter
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
+
         if (convertView == null)
         {
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.expand_list_perso_scores, null);
         }
 
+        Score_solo sc = getItem(position);
         ImageView imageNumRow = (ImageView) convertView.findViewById(R.id.score_solo_couronne_id);
-        TextView txtNumRow = (TextView) convertView.findViewById(R.id.temps_score_solo);
-        TextView txtInfo = (TextView) convertView.findViewById(R.id.ratio_score_solo);
+        TextView txtTemps = (TextView) convertView.findViewById(R.id.temps_score_solo);
+        TextView txtRatio = (TextView) convertView.findViewById(R.id.ratio_score_solo);
         TextView txtDifference = (TextView) convertView.findViewById(R.id.di_score_solo);
-
-
+        txtTemps.setText(sc.getTemps());
+        txtRatio.setText(sc.getDifferenceIncrementation()/sc.getNbNombresAtteints()+"");
+        txtDifference.setText(sc.getDifferenceIncrementation()+"");
         return convertView;
     }
 }

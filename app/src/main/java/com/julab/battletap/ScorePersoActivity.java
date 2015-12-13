@@ -38,8 +38,10 @@ public class ScorePersoActivity extends AppCompatActivity {
 
         titreScoreSolo = (TextView)findViewById(R.id.score_perso_id);
 
+
+
         scoreList = (ListView) findViewById(R.id.listView_score_solo);
-        scoreList.setAdapter(new ScorePersoListAdapter(getApplicationContext(), R.layout.expand_list_perso_scores));
+
 
 
         RequestQueue requestQueue = Volley.newRequestQueue(this.getApplicationContext());
@@ -82,7 +84,8 @@ public class ScorePersoActivity extends AppCompatActivity {
                 lstScores.add(score);
             }
 
-            ArrayAdapter<Score_solo> adapter = new ArrayAdapter<>(ScorePersoActivity.this, android.R.layout.simple_list_item_1, lstScores);
+            //ArrayAdapter<Score_solo> adapter = new ArrayAdapter<>(ScorePersoActivity.this, android.R.layout.simple_list_item_1, lstScores);
+            ScorePersoListAdapter adapter = new ScorePersoListAdapter(this, lstScores);
             scoreList.setAdapter(adapter);
 
 
