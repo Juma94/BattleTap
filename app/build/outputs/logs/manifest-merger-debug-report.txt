@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:2:1-80:12
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:2:1-82:12
 	package
 		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:7:5-66
 	android:name
 		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:7:22-64
 application
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:9:5-78:19
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:9:5-80:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.0.1] E:\Android\BattleTap\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:22:5-20
@@ -142,7 +142,11 @@ ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:71:9-75:20
 	android:name
 		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:72:13-46
 activity#com.julab.battletap.ScorePersoActivity
-ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:76:9-77:20
+ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:76:9-79:20
+	android:label
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:77:13-62
+	android:theme
+		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:78:13-56
 	android:name
 		ADDED from E:\Android\BattleTap\app\src\main\AndroidManifest.xml:76:19-53
 uses-sdk

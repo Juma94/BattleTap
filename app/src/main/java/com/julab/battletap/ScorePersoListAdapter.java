@@ -16,13 +16,14 @@ import Model.Score_solo;
 
 public class ScorePersoListAdapter extends ArrayAdapter<Score_solo>
 {
-
+    private  ArrayList<Score_solo> lstScores;
     public ScorePersoListAdapter(Context context, ArrayList<Score_solo> scores) {
         super(context, 0, scores);
+        lstScores = scores;
     }
     public int getCount()
     {
-        return 10;
+        return lstScores.size();
     }
 
     @Override
@@ -40,8 +41,10 @@ public class ScorePersoListAdapter extends ArrayAdapter<Score_solo>
         TextView txtTemps = (TextView) convertView.findViewById(R.id.temps_score_solo);
         TextView txtRatio = (TextView) convertView.findViewById(R.id.ratio_score_solo);
         TextView txtDifference = (TextView) convertView.findViewById(R.id.di_score_solo);
+
         txtTemps.setText(sc.getTemps());
-        txtRatio.setText(sc.getDifferenceIncrementation()/sc.getNbNombresAtteints()+"");
+        double ratio = sc.getDifferenceIncrementation()/sc.getNbNombresAtteints();
+        txtRatio.setText((double)sc.getDifferenceIncrementation()/sc.getNbNombresAtteints()+"");
         txtDifference.setText(sc.getDifferenceIncrementation()+"");
         return convertView;
     }

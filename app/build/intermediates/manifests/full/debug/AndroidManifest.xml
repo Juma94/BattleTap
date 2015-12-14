@@ -79,7 +79,10 @@
             android:label="@string/title_activity_score_solo"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name="com.julab.battletap.ScorePersoActivity" >
+        <activity
+            android:name="com.julab.battletap.ScorePersoActivity"
+            android:label="@string/title_activity_score_solo"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 

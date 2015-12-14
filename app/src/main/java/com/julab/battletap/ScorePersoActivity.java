@@ -75,13 +75,16 @@ public class ScorePersoActivity extends AppCompatActivity {
             {
                 JSONObject jsobj = reponse.getJSONObject(i);
                 Score_solo score = new Score_solo();
-
-                score.setIdScore(jsobj.getInt("idScore"));
-                score.setDifferenceIncrementation(jsobj.getInt("differenceIncrementation"));
-                score.setTemps(jsobj.getString("temps"));
                 score.setIdJoueur(jsobj.getInt("idJoueur"));
-                score.setNbNombresAtteints(jsobj.getInt("nbNombresAtteints"));
-                lstScores.add(score);
+                if(score.getIdJoueur() == 1)
+                {
+                     score.setIdScore(jsobj.getInt("idScore"));
+                     score.setDifferenceIncrementation(jsobj.getInt("differenceIncrementation"));
+                     score.setTemps(jsobj.getString("temps"));
+                     score.setNbNombresAtteints(jsobj.getInt("nbNombresAtteints"));
+                     lstScores.add(score);
+                }
+
             }
 
             //ArrayAdapter<Score_solo> adapter = new ArrayAdapter<>(ScorePersoActivity.this, android.R.layout.simple_list_item_1, lstScores);
