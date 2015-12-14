@@ -24,6 +24,7 @@ public class MenuActivity extends AppCompatActivity
 
     private final int SCORE_GROUP = 2;
         private final int SCORE_CHILD = 0;
+        private final int SCORE_RANKING = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -54,6 +55,11 @@ public class MenuActivity extends AppCompatActivity
                     startActivity(intent);
                 }
                 if(groupPosition == SCORE_GROUP && childPosition == SCORE_CHILD)
+                {
+                    Intent intent = new Intent(MenuActivity.this, ScorePersoActivity.class);
+                    startActivity(intent);
+                }
+                if(groupPosition == SCORE_GROUP && childPosition == SCORE_RANKING)
                 {
                     Intent intent = new Intent(MenuActivity.this, ScorePersoActivity.class);
                     startActivity(intent);
@@ -128,10 +134,17 @@ public class MenuActivity extends AppCompatActivity
         group3.setName("Scores");
 
         ExpandListChild child1Group3 = new ExpandListChild();
-        child1Group3.setName("Show scores");
+        child1Group3.setName("Own scores");
         child1Group3.setTag(null);
 
         listChild.add(child1Group3);
+
+        ExpandListChild child2Group3 = new ExpandListChild();
+        child2Group3.setName("Ranking");
+        child2Group3.setTag(null);
+
+        listChild.add(child2Group3);
+
         group3.setItems(listChild);
 
         listGroup.add(group1);
