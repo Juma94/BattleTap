@@ -30,15 +30,15 @@ public class SummaryBoardGameSoloActivity extends AppCompatActivity
         int nbElems = globalData.getTabNumbersTaps().size() - 1;
         for (int i = 0; i < nbElems; i++)
         {
-            totalDiff += globalData.getTabNumbersCaught().get(i) - globalData.getTabNumbersTaps().get(i);
+            totalDiff += globalData.getTabNumbersToCatch().get(i) - globalData.getTabNumbersTaps().get(i);
         }
         // add penality of the last catch number
-        totalDiff -= globalData.getTabNumbersCaught().get(nbElems) - globalData.getTabNumbersTaps().get(nbElems);
+        totalDiff -= globalData.getTabNumbersToCatch().get(nbElems) - globalData.getTabNumbersTaps().get(nbElems);
         txtTotalDifference.setText("Total difference : " + totalDiff);
         // -1 because the last one are saved (the last are bigger than the numbers caught)
-        txtTotalNumbersCaught.setText("Total caught : " + (globalData.getTabNumbersCaught().size() - 1));
+        txtTotalNumbersCaught.setText("Total caught : " + (globalData.getTabNumbersToCatch().size() - 1));
 
-        double ratio = totalDiff > 0 ? (double) (globalData.getTabNumbersCaught().size() - 1) / (double) totalDiff : 0;
+        double ratio = totalDiff > 0 ? (double) (globalData.getTabNumbersToCatch().size() - 1) / (double) totalDiff : 0;
         double ratioTwoDecimal = (double) ((int) (ratio * 100)) / 100;
         txtRatio.setText("Ratio : " + ratioTwoDecimal);
     }

@@ -25,7 +25,7 @@ public class SummaryListAdapter extends ArrayAdapter
 
     public int getCount()
     {
-        return globalData.getTabNumbersCaught().size();
+        return globalData.getTabNumbersToCatch().size();
     }
 
     @Override
@@ -45,15 +45,15 @@ public class SummaryListAdapter extends ArrayAdapter
         if (globalData.isLastItem(position + 1))
         {
             imageNumRow.setBackgroundColor(Color.parseColor("#ff8b00"));
-            txtDifference.setText(globalData.getString(R.string.text_penality) + (globalData.getTabNumbersTaps().get(position) - globalData.getTabNumbersCaught().get(position)));
+            txtDifference.setText(globalData.getString(R.string.text_penality) + (globalData.getTabNumbersTaps().get(position) - globalData.getTabNumbersToCatch().get(position)));
         }
         else
         {
-            txtDifference.setText(globalData.getString(R.string.text_difference) + (globalData.getTabNumbersCaught().get(position) - globalData.getTabNumbersTaps().get(position)));
+            txtDifference.setText(globalData.getString(R.string.text_difference) + (globalData.getTabNumbersToCatch().get(position) - globalData.getTabNumbersTaps().get(position)));
         }
 
         txtNumRow.setText((position + 1) + "");
-        txtInfo.setText("Taps : " + globalData.getTabNumbersTaps().get(position) + globalData.getString(R.string.text_caught) + globalData.getTabNumbersCaught().get(position));
+        txtInfo.setText("Taps : " + globalData.getTabNumbersTaps().get(position) + globalData.getString(R.string.text_caught) + globalData.getTabNumbersToCatch().get(position));
 
         return convertView;
     }

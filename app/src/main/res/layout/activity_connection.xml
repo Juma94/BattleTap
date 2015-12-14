@@ -62,12 +62,12 @@
                     android:textColorHint="#d6d6d6"
                     android:autoText="false"
                     android:background="@drawable/edit_text_color"
-                    android:textColor="#ffffff"/>
+                    android:textColor="#ffffff"
+                    />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
                     android:ems="10"
                     android:id="@+id/pwdTextId"
                     android:hint="@string/passwordText"
@@ -75,7 +75,8 @@
                     android:textColorHint="#d6d6d6"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/edit_text_color"
-                    android:textColor="#ffffff"/>
+                    android:textColor="#ffffff"
+                    android:inputType="textPassword"/>
 
             </LinearLayout>
 

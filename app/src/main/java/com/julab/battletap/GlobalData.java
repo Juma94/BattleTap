@@ -1,5 +1,6 @@
 package com.julab.battletap;
 
+import android.util.Log;
 import android.widget.Chronometer;
 
 import java.util.ArrayList;
@@ -9,20 +10,20 @@ import java.util.ArrayList;
  */
 public class GlobalData extends android.app.Application
 {
-    private ArrayList<Integer> tabNumbersCaught;
+    private ArrayList<Integer> tabNumbersToCatch;
     private ArrayList<Integer> tabNumbersTaps;
     private Chronometer chrono;
-
+    private boolean winOrLoose;
     private SummaryInfo summaryInfo;
 
-    public ArrayList<Integer> getTabNumbersCaught()
+    public ArrayList<Integer> getTabNumbersToCatch()
     {
-        return tabNumbersCaught;
+        return tabNumbersToCatch;
     }
 
-    public void setTabNumbersCaught(ArrayList<Integer> tabNumbersCaught)
+    public void setTabNumbersToCatch(ArrayList<Integer> tabNumbersToCatch)
     {
-        this.tabNumbersCaught = tabNumbersCaught;
+        this.tabNumbersToCatch = tabNumbersToCatch;
     }
 
     public ArrayList<Integer> getTabNumbersTaps()
@@ -58,5 +59,27 @@ public class GlobalData extends android.app.Application
     public void setSummaryInfo(SummaryInfo summaryInfo)
     {
         this.summaryInfo = summaryInfo;
+    }
+
+    public int getTotalDifference()
+    {
+        int diffTotal = 0;
+        for(int i = 0; i < tabNumbersTaps.size(); i++)
+        {
+            int diff = tabNumbersToCatch.get(i) - tabNumbersTaps.get(i);
+            diffTotal += diff > 0 ? diff : diff*-1;
+        }
+        Log.i("DebugMulti", "Total diff = " + diffTotal);
+        return diffTotal;
+    }
+
+    public boolean isWinOrLoose()
+    {
+        return winOrLoose;
+    }
+
+    public void setWinOrLoose(boolean winOrLoose)
+    {
+        this.winOrLoose = winOrLoose;
     }
 }

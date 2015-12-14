@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".GlobalData"
@@ -73,8 +74,13 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
+            android:name=".ScorePersoActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
             android:name=".SummaryBoardGameMultiFTActivity"
-            android:label="@string/title_activity_summary_board_game_multi" >
+            android:label="@string/title_activity_summary_board_game_multi"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 

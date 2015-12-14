@@ -144,7 +144,7 @@ public class BoardGameSoloActivity extends AppCompatActivity
                             {
                                 // save datas
                                 GlobalData globalData = (GlobalData) getApplicationContext();
-                                globalData.setTabNumbersCaught(tabNumbersCaught);
+                                globalData.setTabNumbersToCatch(tabNumbersCaught);
                                 globalData.setTabNumbersTaps(tabNumbersTaps);
                                 globalData.setChrono(chronometer);
 

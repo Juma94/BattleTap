@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="com.julab.battletap.GlobalData"
@@ -79,8 +80,13 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
+            android:name="com.julab.battletap.ScorePersoActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
             android:name="com.julab.battletap.SummaryBoardGameMultiFTActivity"
-            android:label="@string/title_activity_summary_board_game_multi" >
+            android:label="@string/title_activity_summary_board_game_multi"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 
