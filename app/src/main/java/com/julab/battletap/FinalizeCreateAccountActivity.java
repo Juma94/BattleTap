@@ -100,7 +100,7 @@ public class FinalizeCreateAccountActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(reponseSecrete.length() < 1 || reponseSecrete.length()>100)
                 {
-                    Toast.makeText(FinalizeCreateAccountActivity.this,"La reponse ne peut dépasser 100 caractère et doit comprendre au moins 1 caractère", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FinalizeCreateAccountActivity.this,"La reponse ne peut dépasser 100 caractères et doit comprendre au moins 1 caractère", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
