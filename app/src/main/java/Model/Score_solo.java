@@ -1,9 +1,11 @@
 package Model;
 
+import java.io.Serializable;
+
 /**
  * Created by user on 13-12-15.
  */
-public class Score_solo {
+public class Score_solo implements Serializable {
 
     private Integer idScore;
     private String temps;

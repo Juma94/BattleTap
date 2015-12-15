@@ -1,9 +1,11 @@
 package Model;
 
+import java.io.Serializable;
+
 /**
  * Created by user on 13-12-15.
  */
-public class Continent {
+public class Continent implements Serializable {
 
     private String reference;
     private String libelle;
@@ -30,5 +32,10 @@ public class Continent {
 
     public void setLibelle(String libelle) {
         this.libelle = libelle;
+    }
+
+    public String toString()
+    {
+        return libelle.toUpperCase();
     }
 }

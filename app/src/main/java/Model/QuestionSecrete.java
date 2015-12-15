@@ -1,9 +1,11 @@
 package Model;
 
+import java.io.Serializable;
+
 /**
  * Created by user on 13-12-15.
  */
-public class QuestionSecrete {
+public class QuestionSecrete implements Serializable{
     private Integer idQuestion;
     private String libelle;
 
@@ -29,5 +31,10 @@ public class QuestionSecrete {
 
     public void setLibelle(String libelle) {
         this.libelle = libelle;
+    }
+
+    public String toString()
+    {
+        return libelle;
     }
 }

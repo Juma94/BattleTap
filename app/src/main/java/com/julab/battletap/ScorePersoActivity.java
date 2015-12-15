@@ -37,9 +37,6 @@ public class ScorePersoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_score_perso);
 
         titreScoreSolo = (TextView)findViewById(R.id.score_perso_id);
-
-
-
         scoreList = (ListView) findViewById(R.id.listView_score_solo);
 
 
@@ -57,7 +54,7 @@ public class ScorePersoActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                Toast.makeText(ScorePersoActivity.this, "Erreur Reponse : " + error.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(ScorePersoActivity.this, "Erreur : " + error.getMessage(), Toast.LENGTH_LONG).show();
 
             }
         });
